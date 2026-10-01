@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["5S6J3PP26G.com.phisoftware.caradio.app"],
+        "components": [
+          { "/": "/carwave/s/*", "comment": "İstasyon paylaşımı" },
+          { "/": "/carwave/p/*", "comment": "Podcast paylaşımı" }
+        ]
+      }
+    ]
+  }
+}
