@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahalle – Terms of Use</title>
+<meta name="description" content="Mahalle terms of use: free game, in-app purchases, virtual items, liability and governing law.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --ink: #1D130B; --accent: #FF9A2E; --accent-soft: #FFEBD2; --link: #B85A00;
+    --bg: #FBF7F2; --surface: #FFFFFF; --text: #1E1812; --muted: #6B6054; --line: #EADFD2; --radius: 22px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15100B; --surface: #211912; --text: #F6EFE7; --muted: #B5A89A; --line: #372B1F; --accent-soft: #3A2A16; --link: #FFB257; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Dil: yalnız seçili dilin öğeleri görünür */
+  html[lang="tr"] [data-l]:not([data-l="tr"]) { display: none !important; }
+  html[lang="en"] [data-l]:not([data-l="en"]) { display: none !important; }
+  html[lang="de"] [data-l]:not([data-l="de"]) { display: none !important; }
+  html[lang="fr"] [data-l]:not([data-l="fr"]) { display: none !important; }
+  html[lang="nl"] [data-l]:not([data-l="nl"]) { display: none !important; }
+  html[lang="es"] [data-l]:not([data-l="es"]) { display: none !important; }
+  html[lang="it"] [data-l]:not([data-l="it"]) { display: none !important; }
+  html[lang="ru"] [data-l]:not([data-l="ru"]) { display: none !important; }
+  html[lang="ar"] [data-l]:not([data-l="ar"]) { display: none !important; }
+  html[lang="az"] [data-l]:not([data-l="az"]) { display: none !important; }
+
+  .top { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(18px); -webkit-backdrop-filter: saturate(1.6) blur(18px);
+    background: color-mix(in srgb, var(--ink) 82%, transparent); color: #fff; }
+  .top .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+  .top img { width: 30px; height: 30px; border-radius: 8px; }
+  .top b { font-size: 17px; letter-spacing: -.01em; }
+  .top a.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  .top nav { margin-inline-start: auto; display: flex; gap: 18px; align-items: center; font-size: 15px; flex-wrap: wrap; }
+  .top nav a { color: #E6DACB; } .top nav a:hover { color: #fff; text-decoration: none; }
+  .langs { display: flex; flex-wrap: wrap; border: 1px solid rgba(255,255,255,.25); border-radius: 18px; overflow: hidden; }
+  .langs button { background: none; border: 0; color: #E6DACB; font: 600 12px/1 inherit; padding: 8px 9px; cursor: pointer; }
+  .langs button.on { background: var(--accent); color: var(--ink); }
+  @media (max-width: 760px) { .top nav a { display: none; } .top nav { width: 100%; margin: 0; } .langs { width: 100%; justify-content: space-between; } .langs button { flex: 1; padding: 8px 2px; } }
+
+  section { padding: 84px 0; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--link); margin: 0 0 10px; }
+  h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 14px; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 38em; margin: 0 0 10px; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 8px; color: var(--muted); font-size: 15.5px; }
+  .alt { background: var(--surface); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--ink); font-weight: 650;
+    padding: 13px 20px; border-radius: 14px; font-size: 16px; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn.accent { background: var(--accent); color: var(--ink); }
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 16px; justify-content: space-between; }
+  footer .attr { flex-basis: 100%; font-size: 13px; opacity: .85; }
+
+  main.doc { max-width: 760px; margin: 0 auto; padding: 36px 20px 24px; }
+  h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: -.02em; }
+  main h2 { font-size: 21px; margin: 32px 0 8px; letter-spacing: 0; }
+  .muted { opacity: .65; margin: 0 0 18px; }
+  main p { margin: 0 0 12px; }
+  .faq .card { margin: 14px 0; background: var(--surface); } .faq .card h3 { font-size: 17px; } .faq .card p { color: var(--text); opacity: .85; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt=""><b>Mahalle</b></a>
+    <nav>
+      <a href="./#features"><span data-l="tr">Özellikler</span><span data-l="en">Features</span><span data-l="de">Funktionen</span><span data-l="fr">Fonctions</span><span data-l="nl">Functies</span><span data-l="es">Funciones</span><span data-l="it">Funzioni</span><span data-l="ru">Возможности</span><span data-l="ar">المزايا</span><span data-l="az">Xüsusiyyətlər</span></a>
+      <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a>
+      <a href="privacy.html"><span data-l="tr">Gizlilik</span><span data-l="en">Privacy</span><span data-l="de">Datenschutz</span><span data-l="fr">Confidentialité</span><span data-l="nl">Privacy</span><span data-l="es">Privacidad</span><span data-l="it">Privacy</span><span data-l="ru">Конфиденциальность</span><span data-l="ar">الخصوصية</span><span data-l="az">Məxfilik</span></a>
+      <div class="langs" role="group" aria-label="Language"><button type="button" data-set="tr">TR</button><button type="button" data-set="en">EN</button><button type="button" data-set="de">DE</button><button type="button" data-set="fr">FR</button><button type="button" data-set="nl">NL</button><button type="button" data-set="es">ES</button><button type="button" data-set="it">IT</button><button type="button" data-set="ru">RU</button><button type="button" data-set="ar">AR</button><button type="button" data-set="az">AZ</button></div>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+<article data-l="tr" lang="tr">
+<h1>Mahalle – Kullanım Koşulları</h1>
+<p class="muted">Son güncelleme: 13 Ekim 2026 · PHI SOFTWARE</p>
+<h2>Kapsam</h2>
+<p>Bu koşullar, PHI SOFTWARE'in oyunu Mahalle'yi kullanımını düzenler. Oyunu indirerek ya da oynayarak bu koşulları kabul etmiş olursun.</p>
+<h2>Ücretsiz oyun ve satın almalar</h2>
+<p>Mahalle ücretsiz indirilir. İsteğe bağlı uygulama içi satın almalar (altın paketleri, Pasaport, 2× altın, Sınırsız Yakıt, spor araç, başlangıç paketi) App Store üzerinden satılır; ödeme, fatura ve iade Apple'ın satın alma kurallarına tabidir ve iade talepleri Apple'a yapılır. “Satın alımları geri yükle” kalıcı ürünleri aynı Apple Hesabında geri getirir.</p>
+<h2>Sanal eşyalar</h2>
+<p>Altın, araçlar ve diğer oyun içi eşyalar gerçek bir parasal değer taşımaz, paraya çevrilemez, devredilemez ve satılamaz. Cihazında saklanır; uygulamayı silersen kaybolur (geri yüklenebilen kalıcı satın alımlar hariç).</p>
+<h2>Hesap</h2>
+<p>Kullanıcı hesabı yoktur. İlerlemen cihazında saklanır; kaybolursa geri getiremeyiz.</p>
+<h2>Yaş</h2>
+<p>Mahalle 12 yaş ve üzeri oyuncular içindir. App Store'daki yaş sınıfı farklıysa App Store sınıfı geçerlidir.</p>
+<h2>Harita verisi</h2>
+<p>Harita verisi © OpenStreetMap katkıcıları (ODbL); bina verisi Overture Maps Foundation ve Microsoft'tan; hava Apple Weather'dandır. Haritalar eksik ya da güncel olmayabilir; oyundaki yerler ve sokak adları gerçekle farklılık gösterebilir.</p>
+<h2>Güvenlik ve sorumluluk</h2>
+<p>Mahalle yalnızca eğlence amaçlıdır. Gerçek bir araç sürerken ya da dikkatini gerektiren herhangi bir durumda asla kullanma. Oyun “olduğu gibi” sunulur; yasaların izin verdiği ölçüde PHI SOFTWARE, kullanımından doğan dolaylı zararlardan sorumlu değildir. Yasal tüketici haklarına halel gelmez.</p>
+<h2>Değişiklikler</h2>
+<p>Bu koşulları güncelleyebiliriz; güncel hâli tarihiyle birlikte her zaman bu sayfadadır.</p>
+<h2>Geçerli hukuk</h2>
+<p>Bu koşullara Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda, emredici tüketici korumaları saklı kalmak üzere, yetkili Türk mahkemeleri ve tüketici hakem heyetleri yetkilidir.</p>
+<h2>İletişim</h2>
+<p>Sorular için: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="en" lang="en">
+<h1>Mahalle – Terms of Use</h1>
+<p class="muted">Last updated: 13 October 2026 · PHI SOFTWARE</p>
+<h2>Scope</h2>
+<p>These terms govern your use of Mahalle, a game by PHI SOFTWARE. By downloading or playing it you accept them.</p>
+<h2>Free game and purchases</h2>
+<p>Mahalle is free to download. Optional in-app purchases (gold packs, Passport, 2× gold, Unlimited Fuel, a sports car, starter pack) are sold through the App Store; payment, billing and refunds follow Apple's purchase rules, and refund requests go to Apple. “Restore Purchases” brings back non-consumable items on the same Apple Account.</p>
+<h2>Virtual items</h2>
+<p>Gold, vehicles and other in-game items have no real-world monetary value, cannot be exchanged for money, and cannot be transferred or sold. They are stored on your device and are lost if you delete the app (except non-consumable purchases, which can be restored).</p>
+<h2>Account</h2>
+<p>There is no user account. Your progress is stored on your device; if it is lost, we cannot restore it.</p>
+<h2>Age</h2>
+<p>Mahalle is intended for players aged 12 and over. If the App Store age rating differs, the App Store rating applies.</p>
+<h2>Map data</h2>
+<p>Map data © OpenStreetMap contributors (ODbL); building data from Overture Maps Foundation and Microsoft; weather from Apple Weather. Maps may be incomplete or out of date; places and street names in the game may differ from reality.</p>
+<h2>Safety and liability</h2>
+<p>Mahalle is for entertainment only. Never use it while driving a real vehicle or in any situation that needs your attention. The game is provided “as is”; to the extent permitted by law, PHI SOFTWARE is not liable for indirect damages arising from its use. Your statutory consumer rights are not affected.</p>
+<h2>Changes</h2>
+<p>We may update these terms; the current version with its date is always on this page.</p>
+<h2>Governing law</h2>
+<p>These terms are governed by the laws of the Republic of Türkiye. Disputes fall under the competent Turkish courts and consumer arbitration committees, without prejudice to mandatory consumer protections.</p>
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="de" lang="de">
+<h1>Mahalle – Nutzungsbedingungen</h1>
+<p class="muted">Zuletzt aktualisiert: 13. Oktober 2026 · PHI SOFTWARE</p>
+<h2>Geltungsbereich</h2>
+<p>Diese Bedingungen regeln die Nutzung von Mahalle, einem Spiel von PHI SOFTWARE. Mit dem Herunterladen oder Spielen stimmst du ihnen zu.</p>
+<h2>Kostenloses Spiel und Käufe</h2>
+<p>Mahalle ist kostenlos. Optionale In-App-Käufe (Goldpakete, Pass, 2× Gold, Unbegrenzter Kraftstoff, Sportwagen, Starterpaket) werden über den App Store verkauft; Zahlung, Abrechnung und Erstattung unterliegen den Kaufregeln von Apple, Erstattungsanfragen richtest du an Apple. „Käufe wiederherstellen“ bringt dauerhafte Artikel mit demselben Apple-Account zurück.</p>
+<h2>Virtuelle Gegenstände</h2>
+<p>Gold, Fahrzeuge und andere Spielgegenstände haben keinen realen Geldwert, können nicht in Geld getauscht, übertragen oder verkauft werden. Sie werden auf deinem Gerät gespeichert und gehen verloren, wenn du die App löschst (außer dauerhafte Käufe, die wiederherstellbar sind).</p>
+<h2>Konto</h2>
+<p>Es gibt kein Benutzerkonto. Dein Fortschritt liegt auf deinem Gerät; geht er verloren, können wir ihn nicht wiederherstellen.</p>
+<h2>Alter</h2>
+<p>Mahalle ist für Spieler ab 12 Jahren gedacht. Weicht die Altersfreigabe im App Store ab, gilt die des App Store.</p>
+<h2>Kartendaten</h2>
+<p>Kartendaten © OpenStreetMap-Mitwirkende (ODbL); Gebäudedaten von Overture Maps Foundation und Microsoft; Wetter von Apple Weather. Karten können unvollständig oder veraltet sein; Orte und Straßennamen im Spiel können von der Realität abweichen.</p>
+<h2>Sicherheit und Haftung</h2>
+<p>Mahalle dient nur der Unterhaltung. Nutze es niemals beim Führen eines echten Fahrzeugs oder in Situationen, die deine Aufmerksamkeit erfordern. Das Spiel wird „wie besehen“ bereitgestellt; soweit gesetzlich zulässig haftet PHI SOFTWARE nicht für mittelbare Schäden aus seiner Nutzung. Gesetzliche Verbraucherrechte bleiben unberührt.</p>
+<h2>Änderungen</h2>
+<p>Wir können diese Bedingungen aktualisieren; die aktuelle Fassung mit Datum steht immer auf dieser Seite.</p>
+<h2>Anwendbares Recht</h2>
+<p>Diese Bedingungen unterliegen dem Recht der Republik Türkei. Für Streitigkeiten sind die zuständigen türkischen Gerichte und Verbraucherschlichtungsstellen zuständig; zwingende Verbraucherschutzvorschriften bleiben unberührt.</p>
+<h2>Kontakt</h2>
+<p>Fragen: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="fr" lang="fr">
+<h1>Mahalle – Conditions d'utilisation</h1>
+<p class="muted">Dernière mise à jour : 13 octobre 2026 · PHI SOFTWARE</p>
+<h2>Champ d'application</h2>
+<p>Ces conditions régissent ton utilisation de Mahalle, un jeu de PHI SOFTWARE. En le téléchargeant ou en y jouant, tu les acceptes.</p>
+<h2>Jeu gratuit et achats</h2>
+<p>Mahalle est gratuit à télécharger. Les achats intégrés facultatifs (packs d'or, Passeport, 2× d'or, Carburant illimité, voiture de sport, pack de départ) sont vendus via l'App Store ; paiement, facturation et remboursement suivent les règles d'achat d'Apple, et les demandes de remboursement s'adressent à Apple. « Restaurer les achats » récupère les articles permanents avec le même compte Apple.</p>
+<h2>Objets virtuels</h2>
+<p>L'or, les véhicules et les autres objets du jeu n'ont aucune valeur monétaire réelle, ne peuvent être échangés contre de l'argent, ni transférés ou vendus. Ils sont stockés sur ton appareil et perdus si tu supprimes l'app (sauf les achats permanents, qui peuvent être restaurés).</p>
+<h2>Compte</h2>
+<p>Il n'y a pas de compte utilisateur. Ta progression est stockée sur ton appareil ; si elle est perdue, nous ne pouvons pas la restaurer.</p>
+<h2>Âge</h2>
+<p>Mahalle est destiné aux joueurs de 12 ans et plus. Si la classification d'âge de l'App Store diffère, c'est celle de l'App Store qui s'applique.</p>
+<h2>Données cartographiques</h2>
+<p>Données cartographiques © contributeurs OpenStreetMap (ODbL) ; bâtiments d'Overture Maps Foundation et Microsoft ; météo d'Apple Weather. Les cartes peuvent être incomplètes ou obsolètes ; les lieux et noms de rues du jeu peuvent différer de la réalité.</p>
+<h2>Sécurité et responsabilité</h2>
+<p>Mahalle est uniquement destiné au divertissement. Ne l'utilise jamais en conduisant un vrai véhicule ni dans une situation exigeant ton attention. Le jeu est fourni « tel quel » ; dans la mesure permise par la loi, PHI SOFTWARE n'est pas responsable des dommages indirects liés à son utilisation. Tes droits légaux de consommateur ne sont pas affectés.</p>
+<h2>Modifications</h2>
+<p>Nous pouvons mettre à jour ces conditions ; la version à jour, avec sa date, est toujours sur cette page.</p>
+<h2>Droit applicable</h2>
+<p>Ces conditions sont régies par le droit de la République de Turquie. Les litiges relèvent des tribunaux turcs compétents et des commissions d'arbitrage des consommateurs, sans préjudice des protections impératives des consommateurs.</p>
+<h2>Contact</h2>
+<p>Questions : <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="nl" lang="nl">
+<h1>Mahalle – Gebruiksvoorwaarden</h1>
+<p class="muted">Laatst bijgewerkt: 13 oktober 2026 · PHI SOFTWARE</p>
+<h2>Toepassingsgebied</h2>
+<p>Deze voorwaarden regelen je gebruik van Mahalle, een spel van PHI SOFTWARE. Door het te downloaden of te spelen ga je ermee akkoord.</p>
+<h2>Gratis spel en aankopen</h2>
+<p>Mahalle is gratis te downloaden. Optionele in-app-aankopen (goudpakketten, Paspoort, 2× goud, Onbeperkt brandstof, een sportauto, startpakket) worden via de App Store verkocht; betaling, facturering en terugbetaling vallen onder de aankoopregels van Apple en terugbetalingsverzoeken gaan naar Apple. “Aankopen herstellen” haalt blijvende items terug met dezelfde Apple-account.</p>
+<h2>Virtuele items</h2>
+<p>Goud, voertuigen en andere items in het spel hebben geen echte geldwaarde en kunnen niet worden omgewisseld voor geld, overgedragen of verkocht. Ze staan op je toestel en gaan verloren als je de app verwijdert (behalve blijvende aankopen, die kunnen worden hersteld).</p>
+<h2>Account</h2>
+<p>Er is geen gebruikersaccount. Je voortgang staat op je toestel; gaat die verloren, dan kunnen we hem niet herstellen.</p>
+<h2>Leeftijd</h2>
+<p>Mahalle is bedoeld voor spelers vanaf 12 jaar. Wijkt de leeftijdsclassificatie in de App Store af, dan geldt die van de App Store.</p>
+<h2>Kaartgegevens</h2>
+<p>Kaartgegevens © OpenStreetMap-bijdragers (ODbL); gebouwgegevens van Overture Maps Foundation en Microsoft; weer van Apple Weather. Kaarten kunnen onvolledig of verouderd zijn; plaatsen en straatnamen in het spel kunnen van de werkelijkheid afwijken.</p>
+<h2>Veiligheid en aansprakelijkheid</h2>
+<p>Mahalle is alleen voor entertainment. Gebruik het nooit tijdens het besturen van een echt voertuig of in situaties die je aandacht vereisen. Het spel wordt geleverd “zoals het is”; voor zover de wet het toestaat is PHI SOFTWARE niet aansprakelijk voor indirecte schade door het gebruik ervan. Je wettelijke consumentenrechten blijven onverminderd gelden.</p>
+<h2>Wijzigingen</h2>
+<p>We kunnen deze voorwaarden bijwerken; de actuele versie met datum staat altijd op deze pagina.</p>
+<h2>Toepasselijk recht</h2>
+<p>Deze voorwaarden vallen onder het recht van de Republiek Turkije. Geschillen vallen onder de bevoegde Turkse rechtbanken en consumentenarbitragecommissies, onverminderd dwingende consumentenbescherming.</p>
+<h2>Contact</h2>
+<p>Vragen: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="es" lang="es">
+<h1>Mahalle – Condiciones de uso</h1>
+<p class="muted">Última actualización: 13 de octubre de 2026 · PHI SOFTWARE</p>
+<h2>Alcance</h2>
+<p>Estas condiciones regulan tu uso de Mahalle, un juego de PHI SOFTWARE. Al descargarlo o jugarlo, las aceptas.</p>
+<h2>Juego gratuito y compras</h2>
+<p>Mahalle se descarga gratis. Las compras opcionales dentro de la app (paquetes de oro, Pasaporte, 2× oro, Combustible ilimitado, un coche deportivo, pack inicial) se venden a través del App Store; el pago, la facturación y los reembolsos siguen las normas de compra de Apple y las solicitudes de reembolso se dirigen a Apple. «Restaurar compras» recupera los artículos permanentes con la misma cuenta de Apple.</p>
+<h2>Objetos virtuales</h2>
+<p>El oro, los vehículos y demás objetos del juego no tienen valor monetario real, no se pueden canjear por dinero ni transferir o vender. Se guardan en tu dispositivo y se pierden si borras la app (salvo las compras permanentes, que pueden restaurarse).</p>
+<h2>Cuenta</h2>
+<p>No hay cuenta de usuario. Tu progreso se guarda en tu dispositivo; si se pierde, no podemos recuperarlo.</p>
+<h2>Edad</h2>
+<p>Mahalle está pensado para jugadores de 12 años o más. Si la clasificación por edad del App Store es distinta, prevalece la del App Store.</p>
+<h2>Datos del mapa</h2>
+<p>Datos del mapa © colaboradores de OpenStreetMap (ODbL); edificios de Overture Maps Foundation y Microsoft; clima de Apple Weather. Los mapas pueden estar incompletos o desactualizados; los lugares y nombres de calles del juego pueden diferir de la realidad.</p>
+<h2>Seguridad y responsabilidad</h2>
+<p>Mahalle es solo para entretenimiento. No lo uses nunca mientras conduces un vehículo real ni en situaciones que requieran tu atención. El juego se ofrece «tal cual»; en la medida permitida por la ley, PHI SOFTWARE no es responsable de daños indirectos derivados de su uso. Tus derechos legales como consumidor no se ven afectados.</p>
+<h2>Cambios</h2>
+<p>Podemos actualizar estas condiciones; la versión vigente, con su fecha, está siempre en esta página.</p>
+<h2>Ley aplicable</h2>
+<p>Estas condiciones se rigen por las leyes de la República de Turquía. Las disputas corresponden a los tribunales turcos competentes y a las juntas arbitrales de consumo, sin perjuicio de las protecciones obligatorias al consumidor.</p>
+<h2>Contacto</h2>
+<p>Preguntas: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="it" lang="it">
+<h1>Mahalle – Condizioni d'uso</h1>
+<p class="muted">Ultimo aggiornamento: 13 ottobre 2026 · PHI SOFTWARE</p>
+<h2>Ambito</h2>
+<p>Queste condizioni regolano l'uso di Mahalle, un gioco di PHI SOFTWARE. Scaricandolo o giocando le accetti.</p>
+<h2>Gioco gratuito e acquisti</h2>
+<p>Mahalle è gratuito da scaricare. Gli acquisti in-app facoltativi (pacchetti d'oro, Passaporto, 2× oro, Carburante illimitato, un'auto sportiva, pacchetto iniziale) sono venduti tramite l'App Store; pagamento, fatturazione e rimborsi seguono le regole di acquisto di Apple e le richieste di rimborso vanno ad Apple. «Ripristina acquisti» recupera gli articoli permanenti con lo stesso account Apple.</p>
+<h2>Oggetti virtuali</h2>
+<p>Oro, veicoli e altri oggetti di gioco non hanno alcun valore monetario reale e non possono essere convertiti in denaro, trasferiti o venduti. Sono salvati sul dispositivo e vanno persi se elimini l'app (esclusi gli acquisti permanenti, che si possono ripristinare).</p>
+<h2>Account</h2>
+<p>Non c'è alcun account utente. I tuoi progressi sono salvati sul dispositivo; se vanno persi non possiamo ripristinarli.</p>
+<h2>Età</h2>
+<p>Mahalle è pensato per giocatori dai 12 anni in su. Se la classificazione per età dell'App Store è diversa, vale quella dell'App Store.</p>
+<h2>Dati cartografici</h2>
+<p>Dati cartografici © collaboratori di OpenStreetMap (ODbL); edifici da Overture Maps Foundation e Microsoft; meteo da Apple Weather. Le mappe possono essere incomplete o non aggiornate; luoghi e nomi di strade nel gioco possono differire dalla realtà.</p>
+<h2>Sicurezza e responsabilità</h2>
+<p>Mahalle è solo per intrattenimento. Non usarlo mai mentre guidi un veicolo reale o in situazioni che richiedono la tua attenzione. Il gioco è fornito «così com'è»; nella misura consentita dalla legge, PHI SOFTWARE non risponde di danni indiretti derivanti dal suo uso. I tuoi diritti di consumatore previsti dalla legge restano salvi.</p>
+<h2>Modifiche</h2>
+<p>Possiamo aggiornare queste condizioni; la versione aggiornata, con la data, è sempre in questa pagina.</p>
+<h2>Legge applicabile</h2>
+<p>Queste condizioni sono regolate dalla legge della Repubblica di Turchia. Le controversie spettano ai tribunali turchi competenti e alle commissioni arbitrali dei consumatori, fatte salve le tutele inderogabili dei consumatori.</p>
+<h2>Contatti</h2>
+<p>Domande: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="ru" lang="ru">
+<h1>Mahalle – Условия использования</h1>
+<p class="muted">Обновлено: 13 октября 2026 г. · PHI SOFTWARE</p>
+<h2>Область действия</h2>
+<p>Эти условия регулируют использование Mahalle — игры от PHI SOFTWARE. Скачивая игру или играя в неё, вы принимаете их.</p>
+<h2>Бесплатная игра и покупки</h2>
+<p>Mahalle можно скачать бесплатно. Необязательные покупки в приложении (наборы золота, Паспорт, 2× золота, Безлимитное топливо, спорткар, стартовый набор) продаются через App Store; оплата, выставление счетов и возвраты регулируются правилами покупок Apple, запросы на возврат направляются в Apple. «Восстановить покупки» возвращает постоянные товары с тем же Apple Account.</p>
+<h2>Виртуальные предметы</h2>
+<p>Золото, машины и другие внутриигровые предметы не имеют реальной денежной стоимости, не обмениваются на деньги, не передаются и не продаются. Они хранятся на вашем устройстве и пропадают при удалении приложения (кроме постоянных покупок, которые можно восстановить).</p>
+<h2>Аккаунт</h2>
+<p>Аккаунта нет. Ваш прогресс хранится на устройстве; если он потеряется, мы не сможем его восстановить.</p>
+<h2>Возраст</h2>
+<p>Mahalle предназначена для игроков от 12 лет. Если возрастной рейтинг в App Store отличается, действует рейтинг App Store.</p>
+<h2>Данные карты</h2>
+<p>Данные карты © участники OpenStreetMap (ODbL); данные о зданиях — Overture Maps Foundation и Microsoft; погода — Apple Weather. Карты могут быть неполными или устаревшими; места и названия улиц в игре могут отличаться от реальных.</p>
+<h2>Безопасность и ответственность</h2>
+<p>Mahalle предназначена только для развлечения. Никогда не используйте её за рулём реального транспортного средства и в ситуациях, требующих вашего внимания. Игра предоставляется «как есть»; в пределах, допустимых законом, PHI SOFTWARE не отвечает за косвенный ущерб от её использования. Ваши законные права потребителя не затрагиваются.</p>
+<h2>Изменения</h2>
+<p>Мы можем обновлять эти условия; актуальная версия с датой всегда находится на этой странице.</p>
+<h2>Применимое право</h2>
+<p>К настоящим условиям применяется право Турецкой Республики. Споры подлежат рассмотрению компетентными судами Турции и потребительскими арбитражными комиссиями, без ущерба для императивных норм защиты потребителей.</p>
+<h2>Контакты</h2>
+<p>Вопросы: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="ar" lang="ar" dir="rtl">
+<h1>Mahalle – شروط الاستخدام</h1>
+<p class="muted">آخر تحديث: 13 أكتوبر 2026 · PHI SOFTWARE</p>
+<h2>النطاق</h2>
+<p>تنظّم هذه الشروط استخدامك Mahalle، وهي لعبة من PHI SOFTWARE. بتنزيلها أو لعبها فإنك توافق عليها.</p>
+<h2>لعبة مجانية ومشتريات</h2>
+<p>تنزيل Mahalle مجاني. تُباع المشتريات الاختيارية داخل التطبيق (حزم الذهب وجواز السفر وذهب ×2 والوقود غير المحدود وسيارة رياضية وحزمة تمهيدية) عبر App Store؛ ويخضع الدفع والفوترة والاسترداد لقواعد الشراء لدى Apple، وتُوجَّه طلبات الاسترداد إلى Apple. تعيد «استعادة المشتريات» العناصر الدائمة بحساب Apple نفسه.</p>
+<h2>العناصر الافتراضية</h2>
+<p>لا تحمل الذهب والمركبات وسائر العناصر داخل اللعبة أي قيمة مالية حقيقية، ولا يمكن استبدالها بالمال أو نقلها أو بيعها. تُخزَّن على جهازك وتضيع إذا حذفت التطبيق (باستثناء المشتريات الدائمة القابلة للاستعادة).</p>
+<h2>الحساب</h2>
+<p>لا يوجد حساب مستخدم. يُخزَّن تقدمك على جهازك، وإذا ضاع فلا يمكننا استعادته.</p>
+<h2>العمر</h2>
+<p>Mahalle مخصصة للاعبين من عمر 12 عامًا فأكثر. وإذا اختلف التصنيف العمري في App Store فيُعتمد تصنيف App Store.</p>
+<h2>بيانات الخريطة</h2>
+<p>بيانات الخريطة © مساهمو OpenStreetMap (ODbL)؛ وبيانات المباني من Overture Maps Foundation وMicrosoft؛ والطقس من Apple Weather. قد تكون الخرائط ناقصة أو قديمة، وقد تختلف الأماكن وأسماء الشوارع في اللعبة عن الواقع.</p>
+<h2>السلامة والمسؤولية</h2>
+<p>Mahalle للترفيه فقط. لا تستخدمها أبدًا أثناء قيادة مركبة حقيقية أو في أي موقف يتطلب انتباهك. تُقدَّم اللعبة «كما هي»؛ وبالقدر الذي يسمح به القانون لا تتحمل PHI SOFTWARE المسؤولية عن الأضرار غير المباشرة الناتجة عن استخدامها. ولا تتأثر حقوقك القانونية كمستهلك.</p>
+<h2>التغييرات</h2>
+<p>قد نحدّث هذه الشروط؛ وتجد النسخة الحالية بتاريخها دائمًا في هذه الصفحة.</p>
+<h2>القانون المطبّق</h2>
+<p>تخضع هذه الشروط لقوانين الجمهورية التركية. وتختص بالنزاعات المحاكم التركية المختصة ولجان تحكيم المستهلك، دون المساس بأحكام حماية المستهلك الإلزامية.</p>
+<h2>التواصل</h2>
+<p>للاستفسار: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="az" lang="az">
+<h1>Mahalle – İstifadə Şərtləri</h1>
+<p class="muted">Son yenilənmə: 13 oktyabr 2026 · PHI SOFTWARE</p>
+<h2>Əhatə</h2>
+<p>Bu şərtlər PHI SOFTWARE-in Mahalle oyunundan istifadəni tənzimləyir. Oyunu yükləməklə və ya oynamaqla şərtləri qəbul etmiş olursan.</p>
+<h2>Pulsuz oyun və alışlar</h2>
+<p>Mahalle pulsuz yüklənir. İstəyə bağlı tətbiqdaxili alışlar (qızıl paketləri, Pasport, 2× qızıl, Limitsiz yanacaq, idman avtomobili, başlanğıc paketi) App Store vasitəsilə satılır; ödəniş, hesablaşma və geri ödəmə Apple-ın alış qaydalarına tabedir, geri ödəmə sorğuları Apple-a verilir. “Alışları bərpa et” daimi məhsulları eyni Apple hesabında geri qaytarır.</p>
+<h2>Virtual əşyalar</h2>
+<p>Qızıl, avtomobillər və digər oyundaxili əşyaların real pul dəyəri yoxdur, pula çevrilə, başqasına verilə və ya satıla bilməz. Onlar cihazında saxlanır və tətbiqi silsən itir (bərpa oluna bilən daimi alışlar istisna).</p>
+<h2>Hesab</h2>
+<p>İstifadəçi hesabı yoxdur. İrəliləyişin cihazında saxlanır; itərsə, bərpa edə bilmərik.</p>
+<h2>Yaş</h2>
+<p>Mahalle 12 yaş və yuxarı oyunçular üçündür. App Store-dakı yaş reytinqi fərqlidirsə, App Store reytinqi qüvvədədir.</p>
+<h2>Xəritə məlumatı</h2>
+<p>Xəritə məlumatı © OpenStreetMap töhfəçiləri (ODbL); bina məlumatı Overture Maps Foundation və Microsoft-dan; hava Apple Weather-dandır. Xəritələr natamam və ya köhnə ola bilər; oyundakı yerlər və küçə adları reallıqdan fərqlənə bilər.</p>
+<h2>Təhlükəsizlik və məsuliyyət</h2>
+<p>Mahalle yalnız əyləncə üçündür. Onu heç vaxt real nəqliyyat vasitəsi sürərkən və ya diqqət tələb edən hər hansı vəziyyətdə istifadə etmə. Oyun “olduğu kimi” təqdim olunur; qanunun icazə verdiyi qədər PHI SOFTWARE istifadədən yaranan dolayı zərərlərə görə məsuliyyət daşımır. Qanuni istehlakçı hüquqların pozulmur.</p>
+<h2>Dəyişikliklər</h2>
+<p>Bu şərtləri yeniləyə bilərik; güncel variant tarixi ilə həmişə bu səhifədədir.</p>
+<h2>Tətbiq olunan hüquq</h2>
+<p>Bu şərtlərə Türkiyə Respublikasının hüququ tətbiq olunur. Mübahisələr, məcburi istehlakçı müdafiəsi saxlanmaqla, səlahiyyətli Türkiyə məhkəmələrinin və istehlakçı hakimlik komissiyalarının səlahiyyətindədir.</p>
+<h2>Əlaqə</h2>
+<p>Suallar üçün: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 PHI Software · <a href="https://www.phisoftware.com.tr/">phisoftware.com.tr</a></span>
+    <span><a href="privacy.html"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span><span data-l="de">Datenschutzerklärung</span><span data-l="fr">Politique de confidentialité</span><span data-l="nl">Privacybeleid</span><span data-l="es">Política de privacidad</span><span data-l="it">Informativa sulla privacy</span><span data-l="ru">Политика конфиденциальности</span><span data-l="ar">سياسة الخصوصية</span><span data-l="az">Məxfilik Siyasəti</span></a> · <a href="terms.html"><span data-l="tr">Kullanım Koşulları</span><span data-l="en">Terms of Use</span><span data-l="de">Nutzungsbedingungen</span><span data-l="fr">Conditions d'utilisation</span><span data-l="nl">Gebruiksvoorwaarden</span><span data-l="es">Condiciones de uso</span><span data-l="it">Condizioni d'uso</span><span data-l="ru">Условия использования</span><span data-l="ar">شروط الاستخدام</span><span data-l="az">İstifadə Şərtləri</span></a> · <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a> · <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></span>
+    <span class="attr"><span data-l="tr">Harita verisi © OpenStreetMap katkıcıları (ODbL). Bina verisi: Overture Maps Foundation ve Microsoft. Hava: Apple Weather.</span><span data-l="en">Map data © OpenStreetMap contributors (ODbL). Building data: Overture Maps Foundation and Microsoft. Weather: Apple Weather.</span><span data-l="de">Kartendaten © OpenStreetMap-Mitwirkende (ODbL). Gebäudedaten: Overture Maps Foundation und Microsoft. Wetter: Apple Weather.</span><span data-l="fr">Données cartographiques © contributeurs OpenStreetMap (ODbL). Bâtiments : Overture Maps Foundation et Microsoft. Météo : Apple Weather.</span><span data-l="nl">Kaartgegevens © OpenStreetMap-bijdragers (ODbL). Gebouwgegevens: Overture Maps Foundation en Microsoft. Weer: Apple Weather.</span><span data-l="es">Datos del mapa © colaboradores de OpenStreetMap (ODbL). Edificios: Overture Maps Foundation y Microsoft. Clima: Apple Weather.</span><span data-l="it">Dati cartografici © collaboratori di OpenStreetMap (ODbL). Edifici: Overture Maps Foundation e Microsoft. Meteo: Apple Weather.</span><span data-l="ru">Данные карты © участники OpenStreetMap (ODbL). Здания: Overture Maps Foundation и Microsoft. Погода: Apple Weather.</span><span data-l="ar">بيانات الخريطة © مساهمو OpenStreetMap (ODbL). بيانات المباني: Overture Maps Foundation وMicrosoft. الطقس: Apple Weather.</span><span data-l="az">Xəritə məlumatı © OpenStreetMap töhfəçiləri (ODbL). Bina məlumatı: Overture Maps Foundation və Microsoft. Hava: Apple Weather.</span></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var LANGS = ["tr", "en", "de", "fr", "nl", "es", "it", "ru", "ar", "az"];
+  var TITLE = {"tr": "Mahalle – Kullanım Koşulları", "en": "Mahalle – Terms of Use", "de": "Mahalle – Nutzungsbedingungen", "fr": "Mahalle – Conditions d'utilisation", "nl": "Mahalle – Gebruiksvoorwaarden", "es": "Mahalle – Condiciones de uso", "it": "Mahalle – Condizioni d'uso", "ru": "Mahalle – Условия использования", "ar": "Mahalle – شروط الاستخدام", "az": "Mahalle – İstifadə Şərtləri"};
+  var DESC = {"tr": "Mahalle kullanım koşulları: ücretsiz oyun, uygulama içi satın almalar, sanal eşyalar, sorumluluk ve geçerli hukuk.", "en": "Mahalle terms of use: free game, in-app purchases, virtual items, liability and governing law.", "de": "Nutzungsbedingungen von Mahalle: kostenloses Spiel, In-App-Käufe, virtuelle Gegenstände, Haftung und anwendbares Recht.", "fr": "Conditions d'utilisation de Mahalle : jeu gratuit, achats intégrés, objets virtuels, responsabilité et droit applicable.", "nl": "Gebruiksvoorwaarden van Mahalle: gratis spel, in-app-aankopen, virtuele items, aansprakelijkheid en toepasselijk recht.", "es": "Condiciones de uso de Mahalle: juego gratuito, compras dentro de la app, objetos virtuales, responsabilidad y ley aplicable.", "it": "Condizioni d'uso di Mahalle: gioco gratuito, acquisti in-app, oggetti virtuali, responsabilità e legge applicabile.", "ru": "Условия использования Mahalle: бесплатная игра, покупки в приложении, виртуальные предметы, ответственность и применимое право.", "ar": "شروط استخدام Mahalle: لعبة مجانية ومشتريات داخل التطبيق وعناصر افتراضية والمسؤولية والقانون المطبّق.", "az": "Mahalle istifadə şərtləri: pulsuz oyun, tətbiqdaxili alışlar, virtual əşyalar, məsuliyyət və tətbiq olunan hüquq."};
+  var root = document.documentElement;
+  function apply(lang) {
+    root.lang = lang; root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title = TITLE[lang];
+    var m = document.querySelector('meta[name=description]'); if (m) m.content = DESC[lang];
+    document.querySelectorAll('.langs button').forEach(function (b) { b.classList.toggle('on', b.dataset.set === lang); });
+  }
+  var saved = null; try { saved = localStorage.getItem('mahalle-lang'); } catch (e) {}
+  var guess = 'en', prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+  for (var i = 0; i < prefs.length; i++) { var p = String(prefs[i]).toLowerCase().slice(0, 2); if (LANGS.indexOf(p) >= 0) { guess = p; break; } }
+  var fromURL = /[?&]lang=([a-z]{2})/.exec(location.search);
+  if (fromURL && LANGS.indexOf(fromURL[1]) < 0) fromURL = null;
+  apply(fromURL ? fromURL[1] : (LANGS.indexOf(saved) >= 0 ? saved : guess));
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.set); try { localStorage.setItem('mahalle-lang', b.dataset.set); } catch (e) {} });
+  });
+})();
+</script>
+</body>
+</html>

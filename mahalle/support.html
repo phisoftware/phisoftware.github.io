@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahalle – Support</title>
+<meta name="description" content="Mahalle support: frequently asked questions, version info and contact.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --ink: #1D130B; --accent: #FF9A2E; --accent-soft: #FFEBD2; --link: #B85A00;
+    --bg: #FBF7F2; --surface: #FFFFFF; --text: #1E1812; --muted: #6B6054; --line: #EADFD2; --radius: 22px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15100B; --surface: #211912; --text: #F6EFE7; --muted: #B5A89A; --line: #372B1F; --accent-soft: #3A2A16; --link: #FFB257; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Dil: yalnız seçili dilin öğeleri görünür */
+  html[lang="tr"] [data-l]:not([data-l="tr"]) { display: none !important; }
+  html[lang="en"] [data-l]:not([data-l="en"]) { display: none !important; }
+  html[lang="de"] [data-l]:not([data-l="de"]) { display: none !important; }
+  html[lang="fr"] [data-l]:not([data-l="fr"]) { display: none !important; }
+  html[lang="nl"] [data-l]:not([data-l="nl"]) { display: none !important; }
+  html[lang="es"] [data-l]:not([data-l="es"]) { display: none !important; }
+  html[lang="it"] [data-l]:not([data-l="it"]) { display: none !important; }
+  html[lang="ru"] [data-l]:not([data-l="ru"]) { display: none !important; }
+  html[lang="ar"] [data-l]:not([data-l="ar"]) { display: none !important; }
+  html[lang="az"] [data-l]:not([data-l="az"]) { display: none !important; }
+
+  .top { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(18px); -webkit-backdrop-filter: saturate(1.6) blur(18px);
+    background: color-mix(in srgb, var(--ink) 82%, transparent); color: #fff; }
+  .top .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+  .top img { width: 30px; height: 30px; border-radius: 8px; }
+  .top b { font-size: 17px; letter-spacing: -.01em; }
+  .top a.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  .top nav { margin-inline-start: auto; display: flex; gap: 18px; align-items: center; font-size: 15px; flex-wrap: wrap; }
+  .top nav a { color: #E6DACB; } .top nav a:hover { color: #fff; text-decoration: none; }
+  .langs { display: flex; flex-wrap: wrap; border: 1px solid rgba(255,255,255,.25); border-radius: 18px; overflow: hidden; }
+  .langs button { background: none; border: 0; color: #E6DACB; font: 600 12px/1 inherit; padding: 8px 9px; cursor: pointer; }
+  .langs button.on { background: var(--accent); color: var(--ink); }
+  @media (max-width: 760px) { .top nav a { display: none; } .top nav { width: 100%; margin: 0; } .langs { width: 100%; justify-content: space-between; } .langs button { flex: 1; padding: 8px 2px; } }
+
+  section { padding: 84px 0; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--link); margin: 0 0 10px; }
+  h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 14px; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 38em; margin: 0 0 10px; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 8px; color: var(--muted); font-size: 15.5px; }
+  .alt { background: var(--surface); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--ink); font-weight: 650;
+    padding: 13px 20px; border-radius: 14px; font-size: 16px; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn.accent { background: var(--accent); color: var(--ink); }
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 16px; justify-content: space-between; }
+  footer .attr { flex-basis: 100%; font-size: 13px; opacity: .85; }
+
+  main.doc { max-width: 760px; margin: 0 auto; padding: 36px 20px 24px; }
+  h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: -.02em; }
+  main h2 { font-size: 21px; margin: 32px 0 8px; letter-spacing: 0; }
+  .muted { opacity: .65; margin: 0 0 18px; }
+  main p { margin: 0 0 12px; }
+  .faq .card { margin: 14px 0; background: var(--surface); } .faq .card h3 { font-size: 17px; } .faq .card p { color: var(--text); opacity: .85; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt=""><b>Mahalle</b></a>
+    <nav>
+      <a href="./#features"><span data-l="tr">Özellikler</span><span data-l="en">Features</span><span data-l="de">Funktionen</span><span data-l="fr">Fonctions</span><span data-l="nl">Functies</span><span data-l="es">Funciones</span><span data-l="it">Funzioni</span><span data-l="ru">Возможности</span><span data-l="ar">المزايا</span><span data-l="az">Xüsusiyyətlər</span></a>
+      <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a>
+      <a href="privacy.html"><span data-l="tr">Gizlilik</span><span data-l="en">Privacy</span><span data-l="de">Datenschutz</span><span data-l="fr">Confidentialité</span><span data-l="nl">Privacy</span><span data-l="es">Privacidad</span><span data-l="it">Privacy</span><span data-l="ru">Конфиденциальность</span><span data-l="ar">الخصوصية</span><span data-l="az">Məxfilik</span></a>
+      <div class="langs" role="group" aria-label="Language"><button type="button" data-set="tr">TR</button><button type="button" data-set="en">EN</button><button type="button" data-set="de">DE</button><button type="button" data-set="fr">FR</button><button type="button" data-set="nl">NL</button><button type="button" data-set="es">ES</button><button type="button" data-set="it">IT</button><button type="button" data-set="ru">RU</button><button type="button" data-set="ar">AR</button><button type="button" data-set="az">AZ</button></div>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+<article data-l="tr" lang="tr">
+<h1>Mahalle – Destek</h1>
+<p>Bir şey çalışmıyor ya da önerin mi var? Bize yaz: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Sık sorulan sorular</h2>
+<div class="faq">
+<div class="card"><h3>Konum izni verdim ama “Sokağımdan başla” çalışmıyor.</h3><p>“Sokağımdan başla” konumu yalnızca dokunduğunda ve izin verdiğinde kullanır. iPhone'da Ayarlar › Mahalle › Konum'dan “Uygulamayı Kullanırken”i seç; Konum Servisleri'nin ve Wi-Fi ya da mobil verinin açık olduğundan emin ol. İzin vermek istemezsen ilçeyi listeden seçerek de oynayabilirsin.</p></div>
+<div class="card"><h3>Harita inmiyor ya da eksik yükleniyor.</h3><p>Harita paftaları sürdükçe internetten iner; bu yüzden bağlantı gerekir. Wi-Fi'ye geç ya da mobil verinin açık olduğundan emin ol, birkaç saniye bekle, olmazsa oyunu kapatıp yeniden aç. Bağlantı yavaşsa uzak bölgelerde yollar biraz geç belirir. Sorun sürerse nerede olduğunu yazarak bize ulaş.</p></div>
+<div class="card"><h3>Satın aldığımı geri yüklemek istiyorum.</h3><p>Oyunda Ayarlar › “Satın alımları geri yükle”ye dokun; aynı Apple Hesabı ile giriş yapmış olman gerekir. Pasaport, 2× altın, Sınırsız Yakıt, spor araç ve başlangıç paketi geri gelir. Altın paketleri harcanabilir ürünlerdir ve geri yüklenmez.</p></div>
+<div class="card"><h3>Yakıtım bitti, ne yapmalıyım?</h3><p>Yakıt sürdükçe azalır. Haritadaki benzin istasyonlarına gidip depoyu doldurabilirsin. Hiç yakıt derdi istemezsen mağazadaki Sınırsız Yakıt tüm araçlarda deponun hep dolu kalmasını sağlar (Pasaport'a dahil değildir).</p></div>
+<div class="card"><h3>Bazı ilçeler kilitli görünüyor.</h3><p>Kilitli ilçeler oyunda kazandığın altınla açılır; Pasaport ise tüm ilçelerin kilidini bir seferde açar. Satın aldıysan ve görünmüyorsa “Satın alımları geri yükle”yi dene (yukarıya bak).</p></div>
+</div>
+<h2>Sürüm bilgisi</h2>
+<p><b>Mahalle sürüm 1.0 · iPhone</b></p>
+<p>Sürümünü iPhone'da Ayarlar › Genel › iPhone Depolama › Mahalle altında görebilirsin.</p>
+<h2>Harita verisi ve emeği geçenler</h2>
+<p>Yollar ve binalar © OpenStreetMap katkıcıları (ODbL); bina verisi ayrıca Overture Maps Foundation ve Microsoft'tan; arazi yüksekliği Mapzen Terrain Tiles; hava Apple Weather. Harita paketleri OpenStreetMap verisinden türetilmiştir ve ODbL altındadır; istek üzerine paylaşırız (info@phisoftware.com.tr). 3B model ve yazı tipi künyeleri oyundaki “Emeği geçenler” ekranındadır.</p>
+</article>
+<article data-l="en" lang="en">
+<h1>Mahalle – Support</h1>
+<p>Something not working, or an idea? Write to us: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<div class="card"><h3>“Start from my street” doesn't work (location permission).</h3><p>“Start from my street” (Sokağımdan başla) uses your location only when you tap it and allow it. On iPhone, open Settings › Mahalle › Location and choose “While Using the App”; make sure Location Services and Wi-Fi or mobile data are on. If you'd rather not share it, pick a district from the list instead.</p></div>
+<div class="card"><h3>The map won't load, or loads incompletely.</h3><p>Map tiles are downloaded as you drive, so a connection is needed. Switch to Wi-Fi or make sure mobile data is on, wait a few seconds, and if that doesn't help, close and reopen the game. On a slow connection, roads in remote areas may appear a little late. If it persists, write to us and tell us where you were.</p></div>
+<div class="card"><h3>How do I restore a purchase?</h3><p>In the game, tap Settings › “Restore Purchases” (Satın alımları geri yükle) while signed in with the same Apple Account. Passport, 2× gold, Unlimited Fuel, the sports car and the starter pack come back. Gold packs are consumable and are not restored.</p></div>
+<div class="card"><h3>I ran out of fuel. What now?</h3><p>Fuel runs down as you drive. Head to a gas station on the map to refill. If you never want to think about fuel, Unlimited Fuel in the shop keeps the tank full in every vehicle (it is not included in the Passport).</p></div>
+<div class="card"><h3>Some districts look locked.</h3><p>Locked districts open with gold you earn in the game; the Passport unlocks all districts at once. If you bought it and it doesn't show, try “Restore Purchases” (see above).</p></div>
+</div>
+<h2>Version</h2>
+<p><b>Mahalle version 1.0 · iPhone</b></p>
+<p>You can see your version on iPhone under Settings › General › iPhone Storage › Mahalle.</p>
+<h2>Map data and credits</h2>
+<p>Roads and buildings © OpenStreetMap contributors (ODbL); building data also from Overture Maps Foundation and Microsoft; terrain height from Mapzen Terrain Tiles; weather from Apple Weather. Our map packs are derived from OpenStreetMap data and are available under the ODbL; we share them on request (info@phisoftware.com.tr). Credits for 3D models and fonts are on the in-game Credits screen.</p>
+</article>
+<article data-l="de" lang="de">
+<h1>Mahalle – Support</h1>
+<p>Etwas funktioniert nicht oder du hast eine Idee? Schreib uns: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Häufige Fragen</h2>
+<div class="faq">
+<div class="card"><h3>„Von meiner Straße starten“ funktioniert nicht (Standortfreigabe).</h3><p>„Von meiner Straße starten“ (Sokağımdan başla) nutzt deinen Standort nur, wenn du es antippst und erlaubst. Öffne am iPhone Einstellungen › Mahalle › Ortungsdienste und wähle „Beim Verwenden der App“; achte darauf, dass Ortungsdienste und WLAN oder Mobilfunk an sind. Möchtest du ihn nicht teilen, wähle einen Bezirk aus der Liste.</p></div>
+<div class="card"><h3>Die Karte lädt nicht oder nur unvollständig.</h3><p>Kartenkacheln werden während der Fahrt geladen, daher ist eine Verbindung nötig. Wechsle ins WLAN oder schalte mobile Daten ein, warte ein paar Sekunden und starte das Spiel bei Bedarf neu. Bei langsamer Verbindung erscheinen Straßen in abgelegenen Gebieten etwas später. Hält das Problem an, schreib uns und nenne den Ort.</p></div>
+<div class="card"><h3>Wie stelle ich einen Kauf wieder her?</h3><p>Tippe im Spiel auf Einstellungen › „Käufe wiederherstellen“ (Satın alımları geri yükle), mit demselben Apple-Account angemeldet. Pass, 2× Gold, Unbegrenzter Kraftstoff, Sportwagen und Starterpaket kommen zurück. Goldpakete sind verbrauchbar und werden nicht wiederhergestellt.</p></div>
+<div class="card"><h3>Mir ist der Sprit ausgegangen. Was nun?</h3><p>Der Sprit nimmt beim Fahren ab. Fahre eine Tankstelle auf der Karte an und tanke nach. Wenn du dich nie um Sprit kümmern willst, hält „Unbegrenzter Kraftstoff“ im Shop den Tank in jedem Fahrzeug voll (nicht im Pass enthalten).</p></div>
+<div class="card"><h3>Manche Bezirke sind gesperrt.</h3><p>Gesperrte Bezirke schaltest du mit im Spiel verdientem Gold frei; der Pass schaltet alle Bezirke auf einmal frei. Hast du ihn gekauft und er erscheint nicht, versuche „Käufe wiederherstellen“ (siehe oben).</p></div>
+</div>
+<h2>Version</h2>
+<p><b>Mahalle Version 1.0 · iPhone</b></p>
+<p>Deine Version findest du am iPhone unter Einstellungen › Allgemein › iPhone-Speicher › Mahalle.</p>
+<h2>Kartendaten und Danksagungen</h2>
+<p>Straßen und Gebäude © OpenStreetMap-Mitwirkende (ODbL); Gebäudedaten zusätzlich von Overture Maps Foundation und Microsoft; Geländehöhen von Mapzen Terrain Tiles; Wetter von Apple Weather. Unsere Kartenpakete sind aus OpenStreetMap-Daten abgeleitet und stehen unter der ODbL; wir stellen sie auf Anfrage bereit (info@phisoftware.com.tr). Die Nachweise für 3D-Modelle und Schriften stehen im Spiel auf dem Bildschirm „Credits“.</p>
+</article>
+<article data-l="fr" lang="fr">
+<h1>Mahalle – Assistance</h1>
+<p>Un souci ou une idée ? Écris-nous : <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Questions fréquentes</h2>
+<div class="faq">
+<div class="card"><h3>« Partir de ma rue » ne marche pas (autorisation de position).</h3><p>« Partir de ma rue » (Sokağımdan başla) n'utilise ta position que si tu le touches et l'autorises. Sur l'iPhone, ouvre Réglages › Mahalle › Localisation et choisis « Lorsque l'app est active » ; vérifie que la localisation et le Wi-Fi ou les données mobiles sont activés. Si tu préfères ne pas la partager, choisis un district dans la liste.</p></div>
+<div class="card"><h3>La carte ne se charge pas ou seulement en partie.</h3><p>Les dalles de carte se téléchargent pendant que tu roules : une connexion est donc nécessaire. Passe en Wi-Fi ou vérifie que les données mobiles sont activées, attends quelques secondes, puis ferme et rouvre le jeu si besoin. Avec une connexion lente, les routes des zones isolées apparaissent avec un peu de retard. Si le problème persiste, écris-nous en indiquant où tu étais.</p></div>
+<div class="card"><h3>Comment restaurer un achat ?</h3><p>Dans le jeu, touche Réglages › « Restaurer les achats » (Satın alımları geri yükle), connecté avec le même compte Apple. Passeport, 2× d'or, Carburant illimité, voiture de sport et pack de départ reviennent. Les packs d'or sont consommables et ne sont pas restaurés.</p></div>
+<div class="card"><h3>Je suis en panne de carburant. Que faire ?</h3><p>Le carburant baisse en roulant. Va à une station-service sur la carte pour faire le plein. Si tu ne veux plus t'en soucier, « Carburant illimité » dans la boutique garde le réservoir plein dans tous les véhicules (non inclus dans le Passeport).</p></div>
+<div class="card"><h3>Certains districts sont verrouillés.</h3><p>Les districts verrouillés s'ouvrent avec l'or gagné en jeu ; le Passeport débloque tous les districts d'un coup. Si tu l'as acheté et qu'il n'apparaît pas, essaie « Restaurer les achats » (voir plus haut).</p></div>
+</div>
+<h2>Version</h2>
+<p><b>Mahalle version 1.0 · iPhone</b></p>
+<p>Tu vois ta version sur l'iPhone sous Réglages › Général › Stockage de l'iPhone › Mahalle.</p>
+<h2>Données cartographiques et crédits</h2>
+<p>Routes et bâtiments © contributeurs OpenStreetMap (ODbL) ; bâtiments aussi d'Overture Maps Foundation et Microsoft ; relief de Mapzen Terrain Tiles ; météo d'Apple Weather. Nos paquets de cartes sont dérivés des données OpenStreetMap et sous licence ODbL ; nous les partageons sur demande (info@phisoftware.com.tr). Les crédits des modèles 3D et des polices figurent dans l'écran « Crédits » du jeu.</p>
+</article>
+<article data-l="nl" lang="nl">
+<h1>Mahalle – Support</h1>
+<p>Werkt iets niet, of heb je een idee? Mail ons: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Veelgestelde vragen</h2>
+<div class="faq">
+<div class="card"><h3>“Vanaf mijn straat beginnen” werkt niet (locatietoestemming).</h3><p>“Vanaf mijn straat beginnen” (Sokağımdan başla) gebruikt je locatie alleen als je erop tikt en toestemming geeft. Open op je iPhone Instellingen › Mahalle › Locatie en kies “Tijdens gebruik van de app”; controleer of Locatievoorzieningen en wifi of mobiele data aan staan. Wil je niet delen, kies dan een district uit de lijst.</p></div>
+<div class="card"><h3>De kaart laadt niet of onvolledig.</h3><p>Kaarttegels worden tijdens het rijden gedownload, dus een verbinding is nodig. Schakel over op wifi of zet mobiele data aan, wacht een paar seconden en start het spel zo nodig opnieuw. Bij een trage verbinding verschijnen wegen in afgelegen gebieden iets later. Houdt het probleem aan, mail ons dan en vertel waar je was.</p></div>
+<div class="card"><h3>Hoe herstel ik een aankoop?</h3><p>Tik in het spel op Instellingen › “Aankopen herstellen” (Satın alımları geri yükle), ingelogd met dezelfde Apple-account. Paspoort, 2× goud, Onbeperkt brandstof, de sportauto en het startpakket komen terug. Goudpakketten zijn verbruiksartikelen en worden niet hersteld.</p></div>
+<div class="card"><h3>Mijn brandstof is op. Wat nu?</h3><p>Brandstof loopt op tijdens het rijden. Rij naar een tankstation op de kaart om bij te tanken. Wil je er nooit meer over nadenken, dan houdt “Onbeperkt brandstof” in de winkel de tank in elk voertuig vol (niet inbegrepen in het Paspoort).</p></div>
+<div class="card"><h3>Sommige districten zijn vergrendeld.</h3><p>Vergrendelde districten ontgrendel je met goud dat je in het spel verdient; het Paspoort ontgrendelt alle districten in één keer. Heb je het gekocht en zie je het niet, probeer dan “Aankopen herstellen” (zie hierboven).</p></div>
+</div>
+<h2>Versie</h2>
+<p><b>Mahalle versie 1.0 · iPhone</b></p>
+<p>Je versie zie je op je iPhone onder Instellingen › Algemeen › iPhone-opslag › Mahalle.</p>
+<h2>Kaartgegevens en credits</h2>
+<p>Wegen en gebouwen © OpenStreetMap-bijdragers (ODbL); gebouwgegevens ook van Overture Maps Foundation en Microsoft; terreinhoogte van Mapzen Terrain Tiles; weer van Apple Weather. Onze kaartpakketten zijn afgeleid van OpenStreetMap-gegevens en vallen onder de ODbL; we delen ze op verzoek (info@phisoftware.com.tr). De credits voor 3D-modellen en lettertypen staan op het scherm “Credits” in het spel.</p>
+</article>
+<article data-l="es" lang="es">
+<h1>Mahalle – Ayuda</h1>
+<p>¿Algo no funciona o tienes una idea? Escríbenos: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Preguntas frecuentes</h2>
+<div class="faq">
+<div class="card"><h3>«Empezar desde mi calle» no funciona (permiso de ubicación).</h3><p>«Empezar desde mi calle» (Sokağımdan başla) solo usa tu ubicación cuando lo tocas y lo permites. En el iPhone abre Ajustes › Mahalle › Ubicación y elige «Mientras se usa la app»; comprueba que los Servicios de localización y el Wi-Fi o los datos móviles estén activados. Si prefieres no compartirla, elige un distrito de la lista.</p></div>
+<div class="card"><h3>El mapa no carga o carga incompleto.</h3><p>Las teselas del mapa se descargan mientras conduces, por lo que hace falta conexión. Cambia al Wi-Fi o activa los datos móviles, espera unos segundos y, si no basta, cierra y vuelve a abrir el juego. Con una conexión lenta, las carreteras de zonas remotas pueden aparecer con retraso. Si persiste, escríbenos indicando dónde estabas.</p></div>
+<div class="card"><h3>¿Cómo restauro una compra?</h3><p>En el juego, toca Ajustes › «Restaurar compras» (Satın alımları geri yükle), con la misma cuenta de Apple. Pasaporte, 2× oro, Combustible ilimitado, el coche deportivo y el pack inicial vuelven. Los paquetes de oro son consumibles y no se restauran.</p></div>
+<div class="card"><h3>Me quedé sin combustible. ¿Qué hago?</h3><p>El combustible baja al conducir. Ve a una gasolinera del mapa para repostar. Si no quieres preocuparte nunca, «Combustible ilimitado» en la tienda mantiene el depósito lleno en todos los vehículos (no está incluido en el Pasaporte).</p></div>
+<div class="card"><h3>Algunos distritos están bloqueados.</h3><p>Los distritos bloqueados se abren con el oro que ganas jugando; el Pasaporte desbloquea todos a la vez. Si lo compraste y no aparece, prueba «Restaurar compras» (ver arriba).</p></div>
+</div>
+<h2>Versión</h2>
+<p><b>Mahalle versión 1.0 · iPhone</b></p>
+<p>Puedes ver tu versión en el iPhone en Ajustes › General › Almacenamiento del iPhone › Mahalle.</p>
+<h2>Datos del mapa y créditos</h2>
+<p>Carreteras y edificios © colaboradores de OpenStreetMap (ODbL); edificios también de Overture Maps Foundation y Microsoft; altitud de Mapzen Terrain Tiles; clima de Apple Weather. Nuestros paquetes de mapas derivan de datos de OpenStreetMap y están bajo la ODbL; los compartimos a petición (info@phisoftware.com.tr). Los créditos de los modelos 3D y las fuentes están en la pantalla «Créditos» del juego.</p>
+</article>
+<article data-l="it" lang="it">
+<h1>Mahalle – Assistenza</h1>
+<p>Qualcosa non va o hai un'idea? Scrivici: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Domande frequenti</h2>
+<div class="faq">
+<div class="card"><h3>«Parti dalla mia strada» non funziona (permesso di posizione).</h3><p>«Parti dalla mia strada» (Sokağımdan başla) usa la posizione solo quando lo tocchi e lo consenti. Su iPhone apri Impostazioni › Mahalle › Posizione e scegli «Mentre usi l'app»; assicurati che Servizi di localizzazione e Wi-Fi o dati mobili siano attivi. Se preferisci non condividerla, scegli un distretto dall'elenco.</p></div>
+<div class="card"><h3>La mappa non si carica o si carica a metà.</h3><p>I riquadri della mappa si scaricano mentre guidi, quindi serve una connessione. Passa al Wi-Fi o attiva i dati mobili, attendi qualche secondo e, se serve, chiudi e riapri il gioco. Con una connessione lenta le strade nelle zone remote possono comparire con un po' di ritardo. Se il problema persiste, scrivici indicando dove eri.</p></div>
+<div class="card"><h3>Come ripristino un acquisto?</h3><p>Nel gioco tocca Impostazioni › «Ripristina acquisti» (Satın alımları geri yükle), con lo stesso account Apple. Passaporto, 2× oro, Carburante illimitato, l'auto sportiva e il pacchetto iniziale tornano. I pacchetti d'oro sono consumabili e non vengono ripristinati.</p></div>
+<div class="card"><h3>Ho finito il carburante. Cosa faccio?</h3><p>Il carburante cala mentre guidi. Vai a un distributore sulla mappa per fare il pieno. Se non vuoi più pensarci, «Carburante illimitato» nel negozio tiene il serbatoio sempre pieno su tutti i veicoli (non incluso nel Passaporto).</p></div>
+<div class="card"><h3>Alcuni distretti sono bloccati.</h3><p>I distretti bloccati si aprono con l'oro guadagnato giocando; il Passaporto li sblocca tutti insieme. Se l'hai acquistato e non compare, prova «Ripristina acquisti» (vedi sopra).</p></div>
+</div>
+<h2>Versione</h2>
+<p><b>Mahalle versione 1.0 · iPhone</b></p>
+<p>Puoi vedere la tua versione su iPhone in Impostazioni › Generali › Spazio iPhone › Mahalle.</p>
+<h2>Dati cartografici e crediti</h2>
+<p>Strade ed edifici © collaboratori di OpenStreetMap (ODbL); edifici anche da Overture Maps Foundation e Microsoft; altitudine da Mapzen Terrain Tiles; meteo da Apple Weather. I nostri pacchetti mappa derivano dai dati di OpenStreetMap e sono sotto ODbL; li condividiamo su richiesta (info@phisoftware.com.tr). I crediti dei modelli 3D e dei font sono nella schermata «Crediti» del gioco.</p>
+</article>
+<article data-l="ru" lang="ru">
+<h1>Mahalle – Поддержка</h1>
+<p>Что-то не работает или есть идея? Напишите нам: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Частые вопросы</h2>
+<div class="faq">
+<div class="card"><h3>«Начать с моей улицы» не работает (разрешение на геопозицию).</h3><p>«Начать с моей улицы» (Sokağımdan başla) использует геопозицию, только когда вы нажимаете эту кнопку и разрешаете доступ. На iPhone откройте Настройки › Mahalle › Геопозиция и выберите «При использовании приложения»; убедитесь, что службы геолокации и Wi-Fi или мобильные данные включены. Если не хотите делиться, выберите район из списка.</p></div>
+<div class="card"><h3>Карта не загружается или загружается не полностью.</h3><p>Плитки карты загружаются во время поездки, поэтому нужно подключение. Переключитесь на Wi-Fi или включите мобильные данные, подождите несколько секунд, при необходимости перезапустите игру. При медленном соединении дороги в отдалённых местах появляются с задержкой. Если проблема остаётся, напишите нам и укажите, где вы были.</p></div>
+<div class="card"><h3>Как восстановить покупку?</h3><p>В игре нажмите Настройки › «Восстановить покупки» (Satın alımları geri yükle), войдя с тем же Apple Account. Вернутся Паспорт, 2× золота, Безлимитное топливо, спорткар и стартовый набор. Наборы золота — расходуемые товары, они не восстанавливаются.</p></div>
+<div class="card"><h3>Закончилось топливо. Что делать?</h3><p>Топливо расходуется в пути. Заезжайте на заправки на карте, чтобы заправиться. Если не хотите думать о топливе, «Безлимитное топливо» в магазине держит бак полным у всех машин (в Паспорт не входит).</p></div>
+<div class="card"><h3>Некоторые районы заблокированы.</h3><p>Заблокированные районы открываются золотом, заработанным в игре; Паспорт открывает все районы сразу. Если вы его купили, но он не отображается, попробуйте «Восстановить покупки» (см. выше).</p></div>
+</div>
+<h2>Версия</h2>
+<p><b>Mahalle версия 1.0 · iPhone</b></p>
+<p>Свою версию можно посмотреть на iPhone: Настройки › Основные › Хранилище iPhone › Mahalle.</p>
+<h2>Данные карты и благодарности</h2>
+<p>Дороги и здания © участники OpenStreetMap (ODbL); данные о зданиях также от Overture Maps Foundation и Microsoft; рельеф — Mapzen Terrain Tiles; погода — Apple Weather. Наши пакеты карт получены из данных OpenStreetMap и распространяются по лицензии ODbL; мы предоставляем их по запросу (info@phisoftware.com.tr). Авторство 3D-моделей и шрифтов указано на экране «Авторы» в игре.</p>
+</article>
+<article data-l="ar" lang="ar" dir="rtl">
+<h1>Mahalle – الدعم</h1>
+<p>هل هناك ما لا يعمل أو لديك فكرة؟ راسلنا: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>الأسئلة الشائعة</h2>
+<div class="faq">
+<div class="card"><h3>«ابدأ من شارعي» لا يعمل (إذن الموقع).</h3><p>«ابدأ من شارعي» (Sokağımdan başla) لا يستخدم موقعك إلا عند الضغط عليه والسماح بذلك. على iPhone افتح الإعدادات › Mahalle › الموقع واختر «أثناء استخدام التطبيق»؛ وتأكد من تشغيل خدمات الموقع والواي فاي أو بيانات الجوال. وإن لم ترغب بمشاركته فاختر منطقة من القائمة.</p></div>
+<div class="card"><h3>الخريطة لا تُحمَّل أو تُحمَّل ناقصة.</h3><p>تُنزَّل مربعات الخريطة أثناء القيادة، لذا يلزم اتصال بالإنترنت. انتقل إلى الواي فاي أو فعّل بيانات الجوال، وانتظر بضع ثوانٍ، وإن لم يفلح فأغلق اللعبة وافتحها من جديد. مع الاتصال البطيء قد تظهر الطرق في المناطق النائية متأخرة قليلًا. إن استمرت المشكلة فراسلنا مع ذكر مكانك.</p></div>
+<div class="card"><h3>كيف أستعيد عملية شراء؟</h3><p>في اللعبة اضغط الإعدادات › «استعادة المشتريات» (Satın alımları geri yükle) مع تسجيل الدخول بحساب Apple نفسه. يعود جواز السفر وذهب ×2 والوقود غير المحدود والسيارة الرياضية والحزمة التمهيدية. أما حزم الذهب فهي مستهلكة ولا تُستعاد.</p></div>
+<div class="card"><h3>نفد الوقود. ماذا أفعل؟</h3><p>ينقص الوقود أثناء القيادة. توجّه إلى محطة بنزين على الخريطة لتعبئة الخزان. وإن لم ترغب في الاهتمام بالوقود أبدًا فإن «وقود غير محدود» في المتجر يُبقي الخزان ممتلئًا في كل المركبات (وهو غير مشمول بجواز السفر).</p></div>
+<div class="card"><h3>بعض المناطق مقفلة.</h3><p>تُفتح المناطق المقفلة بالذهب الذي تكسبه في اللعبة، أما جواز السفر فيفتح كل المناطق دفعة واحدة. إن اشتريته ولم يظهر فجرّب «استعادة المشتريات» (انظر أعلاه).</p></div>
+</div>
+<h2>الإصدار</h2>
+<p><b>Mahalle الإصدار 1.0 · iPhone</b></p>
+<p>يمكنك رؤية إصدارك على iPhone من الإعدادات › عام › مساحة iPhone › Mahalle.</p>
+<h2>بيانات الخريطة والشكر</h2>
+<p>الطرق والمباني © مساهمو OpenStreetMap (ODbL)؛ وبيانات المباني أيضًا من Overture Maps Foundation وMicrosoft؛ وارتفاع التضاريس من Mapzen Terrain Tiles؛ والطقس من Apple Weather. حزم الخرائط لدينا مشتقة من بيانات OpenStreetMap ومرخصة بموجب ODbL، ونشاركها عند الطلب (info@phisoftware.com.tr). نسب أعمال النماذج ثلاثية الأبعاد والخطوط في شاشة «شكر وتقدير» داخل اللعبة.</p>
+</article>
+<article data-l="az" lang="az">
+<h1>Mahalle – Dəstək</h1>
+<p>Nəsə işləmir, yoxsa təklifin var? Bizə yaz: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+<h2>Tez-tez verilən suallar</h2>
+<div class="faq">
+<div class="card"><h3>“Küçəmdən başla” işləmir (məkan icazəsi).</h3><p>“Küçəmdən başla” (Sokağımdan başla) məkanı yalnız ona toxunub icazə verdikdə istifadə edir. iPhone-da Ayarlar › Mahalle › Məkan bölməsini açıb “Tətbiqdən istifadə zamanı” seç; məkan xidmətlərinin və Wi-Fi ya da mobil məlumatın açıq olduğuna əmin ol. Paylaşmaq istəmirsənsə, rayonu siyahıdan seç.</p></div>
+<div class="card"><h3>Xəritə yüklənmir və ya natamam yüklənir.</h3><p>Xəritə sahələri sürdükcə internetdən yüklənir, ona görə bağlantı lazımdır. Wi-Fi-a keç və ya mobil məlumatın açıq olduğuna əmin ol, bir neçə saniyə gözlə, olmasa oyunu bağlayıb yenidən aç. Bağlantı yavaşdırsa, uzaq ərazilərdə yollar bir az gec görünür. Problem davam edərsə, harada olduğunu yazaraq bizə müraciət et.</p></div>
+<div class="card"><h3>Aldığımı necə bərpa edim?</h3><p>Oyunda Ayarlar › “Alışları bərpa et” (Satın alımları geri yükle) düyməsinə toxun; eyni Apple hesabı ilə daxil olmalısan. Pasport, 2× qızıl, Limitsiz yanacaq, idman avtomobili və başlanğıc paketi geri qayıdır. Qızıl paketləri istehlak məhsuludur və bərpa olunmur.</p></div>
+<div class="card"><h3>Yanacağım qurtardı, nə edim?</h3><p>Yanacaq sürdükcə azalır. Xəritədəki benzin stansiyalarına gedib çəni doldura bilərsən. Yanacaq dərdi istəmirsənsə, mağazadakı Limitsiz yanacaq bütün avtomobillərdə çəni həmişə dolu saxlayır (Pasporta daxil deyil).</p></div>
+<div class="card"><h3>Bəzi rayonlar kilidli görünür.</h3><p>Kilidli rayonlar oyunda qazandığın qızılla açılır; Pasport isə bütün rayonların kilidini birdəfəlik açır. Alıbsansa və görünmürsə, “Alışları bərpa et” düyməsini yoxla (yuxarıya bax).</p></div>
+</div>
+<h2>Versiya</h2>
+<p><b>Mahalle versiya 1.0 · iPhone</b></p>
+<p>Versiyanı iPhone-da Ayarlar › Əsas › iPhone yaddaşı › Mahalle bölməsində görə bilərsən.</p>
+<h2>Xəritə məlumatı və təşəkkürlər</h2>
+<p>Yollar və binalar © OpenStreetMap töhfəçiləri (ODbL); bina məlumatı həmçinin Overture Maps Foundation və Microsoft-dan; relyef hündürlüyü Mapzen Terrain Tiles-dan; hava Apple Weather-dan. Xəritə paketlərimiz OpenStreetMap məlumatından törədilib və ODbL altındadır; sorğu üzrə paylaşırıq (info@phisoftware.com.tr). 3D model və şrift müəllifləri oyundakı “Təşəkkürlər” ekranındadır.</p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 PHI Software · <a href="https://www.phisoftware.com.tr/">phisoftware.com.tr</a></span>
+    <span><a href="privacy.html"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span><span data-l="de">Datenschutzerklärung</span><span data-l="fr">Politique de confidentialité</span><span data-l="nl">Privacybeleid</span><span data-l="es">Política de privacidad</span><span data-l="it">Informativa sulla privacy</span><span data-l="ru">Политика конфиденциальности</span><span data-l="ar">سياسة الخصوصية</span><span data-l="az">Məxfilik Siyasəti</span></a> · <a href="terms.html"><span data-l="tr">Kullanım Koşulları</span><span data-l="en">Terms of Use</span><span data-l="de">Nutzungsbedingungen</span><span data-l="fr">Conditions d'utilisation</span><span data-l="nl">Gebruiksvoorwaarden</span><span data-l="es">Condiciones de uso</span><span data-l="it">Condizioni d'uso</span><span data-l="ru">Условия использования</span><span data-l="ar">شروط الاستخدام</span><span data-l="az">İstifadə Şərtləri</span></a> · <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a> · <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></span>
+    <span class="attr"><span data-l="tr">Harita verisi © OpenStreetMap katkıcıları (ODbL). Bina verisi: Overture Maps Foundation ve Microsoft. Hava: Apple Weather.</span><span data-l="en">Map data © OpenStreetMap contributors (ODbL). Building data: Overture Maps Foundation and Microsoft. Weather: Apple Weather.</span><span data-l="de">Kartendaten © OpenStreetMap-Mitwirkende (ODbL). Gebäudedaten: Overture Maps Foundation und Microsoft. Wetter: Apple Weather.</span><span data-l="fr">Données cartographiques © contributeurs OpenStreetMap (ODbL). Bâtiments : Overture Maps Foundation et Microsoft. Météo : Apple Weather.</span><span data-l="nl">Kaartgegevens © OpenStreetMap-bijdragers (ODbL). Gebouwgegevens: Overture Maps Foundation en Microsoft. Weer: Apple Weather.</span><span data-l="es">Datos del mapa © colaboradores de OpenStreetMap (ODbL). Edificios: Overture Maps Foundation y Microsoft. Clima: Apple Weather.</span><span data-l="it">Dati cartografici © collaboratori di OpenStreetMap (ODbL). Edifici: Overture Maps Foundation e Microsoft. Meteo: Apple Weather.</span><span data-l="ru">Данные карты © участники OpenStreetMap (ODbL). Здания: Overture Maps Foundation и Microsoft. Погода: Apple Weather.</span><span data-l="ar">بيانات الخريطة © مساهمو OpenStreetMap (ODbL). بيانات المباني: Overture Maps Foundation وMicrosoft. الطقس: Apple Weather.</span><span data-l="az">Xəritə məlumatı © OpenStreetMap töhfəçiləri (ODbL). Bina məlumatı: Overture Maps Foundation və Microsoft. Hava: Apple Weather.</span></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var LANGS = ["tr", "en", "de", "fr", "nl", "es", "it", "ru", "ar", "az"];
+  var TITLE = {"tr": "Mahalle – Destek", "en": "Mahalle – Support", "de": "Mahalle – Support", "fr": "Mahalle – Assistance", "nl": "Mahalle – Support", "es": "Mahalle – Ayuda", "it": "Mahalle – Assistenza", "ru": "Mahalle – Поддержка", "ar": "Mahalle – الدعم", "az": "Mahalle – Dəstək"};
+  var DESC = {"tr": "Mahalle destek: sık sorulan sorular, sürüm bilgisi ve iletişim.", "en": "Mahalle support: frequently asked questions, version info and contact.", "de": "Mahalle-Support: häufige Fragen, Versionsinfo und Kontakt.", "fr": "Assistance Mahalle : questions fréquentes, version et contact.", "nl": "Mahalle-support: veelgestelde vragen, versie-info en contact.", "es": "Ayuda de Mahalle: preguntas frecuentes, versión y contacto.", "it": "Assistenza Mahalle: domande frequenti, versione e contatti.", "ru": "Поддержка Mahalle: частые вопросы, версия и контакты.", "ar": "دعم Mahalle: الأسئلة الشائعة ومعلومات الإصدار والتواصل.", "az": "Mahalle dəstək: tez-tez verilən suallar, versiya və əlaqə."};
+  var root = document.documentElement;
+  function apply(lang) {
+    root.lang = lang; root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title = TITLE[lang];
+    var m = document.querySelector('meta[name=description]'); if (m) m.content = DESC[lang];
+    document.querySelectorAll('.langs button').forEach(function (b) { b.classList.toggle('on', b.dataset.set === lang); });
+  }
+  var saved = null; try { saved = localStorage.getItem('mahalle-lang'); } catch (e) {}
+  var guess = 'en', prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+  for (var i = 0; i < prefs.length; i++) { var p = String(prefs[i]).toLowerCase().slice(0, 2); if (LANGS.indexOf(p) >= 0) { guess = p; break; } }
+  var fromURL = /[?&]lang=([a-z]{2})/.exec(location.search);
+  if (fromURL && LANGS.indexOf(fromURL[1]) < 0) fromURL = null;
+  apply(fromURL ? fromURL[1] : (LANGS.indexOf(saved) >= 0 ? saved : guess));
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.set); try { localStorage.setItem('mahalle-lang', b.dataset.set); } catch (e) {} });
+  });
+})();
+</script>
+</body>
+</html>

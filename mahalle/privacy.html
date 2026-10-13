@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahalle – Privacy Policy</title>
+<meta name="description" content="Mahalle privacy policy: location stays on your device, no account, no ads, anonymous crash and usage data.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --ink: #1D130B; --accent: #FF9A2E; --accent-soft: #FFEBD2; --link: #B85A00;
+    --bg: #FBF7F2; --surface: #FFFFFF; --text: #1E1812; --muted: #6B6054; --line: #EADFD2; --radius: 22px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15100B; --surface: #211912; --text: #F6EFE7; --muted: #B5A89A; --line: #372B1F; --accent-soft: #3A2A16; --link: #FFB257; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+    -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Dil: yalnız seçili dilin öğeleri görünür */
+  html[lang="tr"] [data-l]:not([data-l="tr"]) { display: none !important; }
+  html[lang="en"] [data-l]:not([data-l="en"]) { display: none !important; }
+  html[lang="de"] [data-l]:not([data-l="de"]) { display: none !important; }
+  html[lang="fr"] [data-l]:not([data-l="fr"]) { display: none !important; }
+  html[lang="nl"] [data-l]:not([data-l="nl"]) { display: none !important; }
+  html[lang="es"] [data-l]:not([data-l="es"]) { display: none !important; }
+  html[lang="it"] [data-l]:not([data-l="it"]) { display: none !important; }
+  html[lang="ru"] [data-l]:not([data-l="ru"]) { display: none !important; }
+  html[lang="ar"] [data-l]:not([data-l="ar"]) { display: none !important; }
+  html[lang="az"] [data-l]:not([data-l="az"]) { display: none !important; }
+
+  .top { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(18px); -webkit-backdrop-filter: saturate(1.6) blur(18px);
+    background: color-mix(in srgb, var(--ink) 82%, transparent); color: #fff; }
+  .top .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+  .top img { width: 30px; height: 30px; border-radius: 8px; }
+  .top b { font-size: 17px; letter-spacing: -.01em; }
+  .top a.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+  .top nav { margin-inline-start: auto; display: flex; gap: 18px; align-items: center; font-size: 15px; flex-wrap: wrap; }
+  .top nav a { color: #E6DACB; } .top nav a:hover { color: #fff; text-decoration: none; }
+  .langs { display: flex; flex-wrap: wrap; border: 1px solid rgba(255,255,255,.25); border-radius: 18px; overflow: hidden; }
+  .langs button { background: none; border: 0; color: #E6DACB; font: 600 12px/1 inherit; padding: 8px 9px; cursor: pointer; }
+  .langs button.on { background: var(--accent); color: var(--ink); }
+  @media (max-width: 760px) { .top nav a { display: none; } .top nav { width: 100%; margin: 0; } .langs { width: 100%; justify-content: space-between; } .langs button { flex: 1; padding: 8px 2px; } }
+
+  section { padding: 84px 0; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--link); margin: 0 0 10px; }
+  h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 14px; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 38em; margin: 0 0 10px; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 8px; color: var(--muted); font-size: 15.5px; }
+  .alt { background: var(--surface); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--ink); font-weight: 650;
+    padding: 13px 20px; border-radius: 14px; font-size: 16px; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn.accent { background: var(--accent); color: var(--ink); }
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 16px; justify-content: space-between; }
+  footer .attr { flex-basis: 100%; font-size: 13px; opacity: .85; }
+
+  main.doc { max-width: 760px; margin: 0 auto; padding: 36px 20px 24px; }
+  h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: -.02em; }
+  main h2 { font-size: 21px; margin: 32px 0 8px; letter-spacing: 0; }
+  .muted { opacity: .65; margin: 0 0 18px; }
+  main p { margin: 0 0 12px; }
+  .faq .card { margin: 14px 0; background: var(--surface); } .faq .card h3 { font-size: 17px; } .faq .card p { color: var(--text); opacity: .85; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt=""><b>Mahalle</b></a>
+    <nav>
+      <a href="./#features"><span data-l="tr">Özellikler</span><span data-l="en">Features</span><span data-l="de">Funktionen</span><span data-l="fr">Fonctions</span><span data-l="nl">Functies</span><span data-l="es">Funciones</span><span data-l="it">Funzioni</span><span data-l="ru">Возможности</span><span data-l="ar">المزايا</span><span data-l="az">Xüsusiyyətlər</span></a>
+      <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a>
+      <a href="privacy.html"><span data-l="tr">Gizlilik</span><span data-l="en">Privacy</span><span data-l="de">Datenschutz</span><span data-l="fr">Confidentialité</span><span data-l="nl">Privacy</span><span data-l="es">Privacidad</span><span data-l="it">Privacy</span><span data-l="ru">Конфиденциальность</span><span data-l="ar">الخصوصية</span><span data-l="az">Məxfilik</span></a>
+      <div class="langs" role="group" aria-label="Language"><button type="button" data-set="tr">TR</button><button type="button" data-set="en">EN</button><button type="button" data-set="de">DE</button><button type="button" data-set="fr">FR</button><button type="button" data-set="nl">NL</button><button type="button" data-set="es">ES</button><button type="button" data-set="it">IT</button><button type="button" data-set="ru">RU</button><button type="button" data-set="ar">AR</button><button type="button" data-set="az">AZ</button></div>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+<article data-l="tr" lang="tr">
+<h1>Mahalle – Gizlilik Politikası</h1>
+<p class="muted">Son güncelleme: 13 Ekim 2026 · PHI SOFTWARE</p>
+<p>Mahalle, Türkiye'nin gerçek sokaklarında geçen bir sürüş oyunudur. Kullanıcı hesabı yoktur; reklam göstermeyiz, seni başka uygulama ve sitelerde takip etmeyiz, kişisel veri satmayız veya paylaşmayız. Oyunu geliştirmek için anonim çökme raporları ve kullanım istatistikleri toplarız (aşağıda).</p>
+<h2>Cihazında saklananlar</h2>
+<p>Altınların, araçların, yükseltmelerin, açtığın ilçeler, görev ilerlemen ve ayarların yalnızca cihazında saklanır; bize gönderilmez. Uygulamayı silersen bunlar da silinir. Kalıcı satın alımlar “Satın alımları geri yükle” ile geri gelir.</p>
+<h2>Konum</h2>
+<p>Konumunu yalnızca “Sokağımdan başla”ya dokunursan ve izin verirsen kullanırız. Konum bir kez, cihazında, sürüşe nereden başlanacağını bulmak için kullanılır. Kesin konumun sunucularımıza gönderilmez, saklanmaz ve seni izlemek için kullanılmaz. İzin vermezsen listeden ilçe seçersin. İzni istediğin zaman iPhone'da Ayarlar › Mahalle › Konum'dan değiştirebilirsin.</p>
+<h2>Harita verisi</h2>
+<p>Harita verisi yaklaşık 1 km × 1 km'lik paftalar hâlinde indirilir. İstek yalnızca paftanın adresini içerir, kullanıcıyı tanıtan bir kimlik içermez; en fazla sürdüğün bölgenin yaklaşık yerini gösterir. Her internet isteğinde olduğu gibi barındırma sağlayıcıları (içerik depomuz ve arazi yüksekliği için herkese açık veri barındırıcıları) IP adresini görebilir; bu kayıtları seninle ilişkilendirmeyiz.</p>
+<h2>Harita hazır değilse (Türkiye dışı)</h2>
+<p>Haritası hazır olmayan bir yerde (Türkiye dışı) oyun, seçilen başlangıç noktasının yaklaşık 1,2 km çevresindeki sokak verisini anlık olarak OpenStreetMap Overpass sunucularından (overpass-api.de ve AB'deki bir ayna) ister. Bu istek kimlik taşımaz, ama sunucu IP adresini ve sorgulanan bölgeyi görür.</p>
+<h2>Hava durumu</h2>
+<p>Oyundaki hava, sürdüğün bölgenin o anki gerçek havasıdır. Bunun için bölgenin merkez koordinatı Apple'ın WeatherKit hizmetine gönderilir; Apple bu isteği kendi gizlilik politikasına göre işler. Bu senin kesin konumun değildir. Hava verisi: Apple Weather.</p>
+<h2>Satın almalar</h2>
+<p>Satın almaları Apple yapar; ödeme bilgilerini biz görmeyiz. Satın alma cihazında StoreKit ile doğrulanır, fişler bize gönderilmez. Hangi ürünün alındığı anonim bir kullanım olayı olarak kaydedilir (aşağıya bak).</p>
+<h2>Çökme raporları ve kullanım istatistikleri</h2>
+<p>Mahalle, Google Firebase Crashlytics ve Firebase Analytics kullanır. Oyun çöktüğünde bize bir çökme raporu (cihaz modeli, iOS sürümü, uygulama sürümü ve oyunun teknik durumu) gönderilir. Anonim kullanım olayları hangi özelliklerin kullanıldığını gösterir; örneğin bir ilçenin yüklenmesi, görevin başlaması ya da bitmesi, bir keşif, mağaza ya da garajın açılması, bir satın alma. Bu olaylar rastgele bir uygulama kimliği kullanır; ad, e-posta, hesap, kesin konum ya da reklam kimliği (IDFA) içermez ve seninle ilişkilendirilmez. Reklam kişiselleştirme kapalıdır. Google bu veriyi bizim adımıza <a href="https://firebase.google.com/support/privacy">Firebase gizlilik koşullarına</a> göre işler. İstediğin zaman oyunda Ayarlar › Genel › Kullanım ve çökme verilerini paylaş'ı kapatabilirsin; kapalıyken hiçbir şey gönderilmez.</p>
+<h2>Harita verisi ve emeği geçenler</h2>
+<p>Harita verisi © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap katkıcıları</a> (Open Database License, ODbL). Bina verisi: Overture Maps Foundation ve Microsoft. Arazi yüksekliği: Mapzen Terrain Tiles. 3B modellerin ve yazı tipinin künyeleri oyundaki “Emeği geçenler” ekranındadır.</p>
+<h2>Çocuklar</h2>
+<p>Mahalle, çocuklar dahil kimseden bilerek kişisel bilgi toplamaz.</p>
+<h2>Haklarınız</h2>
+<p>Seni tanımlayan kişisel veri tutmuyoruz. 6698 sayılı KVKK ya da GDPR kapsamındaki bir soru veya talep için bize yaz.</p>
+<h2>Değişiklikler</h2>
+<p>Bu politika değişirse güncel hâli bu sayfada, yeni tarihle yayımlanır.</p>
+<h2>İletişim</h2>
+<p>Sorular için: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="en" lang="en">
+<h1>Mahalle – Privacy Policy</h1>
+<p class="muted">Last updated: 13 October 2026 · PHI SOFTWARE</p>
+<p>Mahalle is a driving game set on Türkiye's real streets. We have no user accounts, we show no ads, we do not track you across apps or websites, and we do not sell or share personal data. We collect anonymous crash reports and usage statistics to improve the game (see below).</p>
+<h2>Data stored on your device</h2>
+<p>Your gold, vehicles, upgrades, unlocked districts, mission progress and settings are stored only on your device and are not sent to us. If you delete the app, they are deleted too. Non-consumable purchases come back with “Restore Purchases”.</p>
+<h2>Location</h2>
+<p>We use your location only if you tap “Start from my street” (Sokağımdan başla) and allow it. It is used once, on your device, to work out where to start driving. Your precise location is not sent to our servers, not stored and not used to track you. If you decline, you simply pick a district from the list. You can change the permission at any time in iPhone Settings › Mahalle › Location.</p>
+<h2>Map data</h2>
+<p>Map data is downloaded in tiles of roughly 1 km × 1 km. A request contains only the address of the tile and no user identifier, so at most it shows the approximate area you are driving in. As with any internet request, the hosting providers (our content storage, and public open-data hosts for terrain height) can see your IP address; we do not link these logs to you.</p>
+<h2>Where no ready-made map exists (outside Türkiye)</h2>
+<p>Where no ready-made map exists (outside Türkiye), the game requests street data within about 1.2 km of the chosen start point live from OpenStreetMap Overpass servers (overpass-api.de and a mirror in the EU). This request carries no identifier, but the server can see your IP address and the area queried.</p>
+<h2>Weather</h2>
+<p>The weather in the game is the real current weather of the area you drive in. To get it, that area's centre coordinate is sent to Apple's WeatherKit service, which handles the request under Apple's own privacy policy. This is not your precise location. Weather data: Apple Weather.</p>
+<h2>Purchases</h2>
+<p>Purchases are handled by Apple; we never see your payment details. They are verified on your device with StoreKit and receipts are not sent to us. Which product was bought is recorded as an anonymous usage event (see below).</p>
+<h2>Crash reports and usage statistics</h2>
+<p>Mahalle uses Google Firebase Crashlytics and Firebase Analytics. When the game crashes, a crash report (device model, iOS version, app version and the technical state of the game) is sent to us. Anonymous usage events tell us which features are used, for example loading a district, starting or finishing a mission, a discovery, opening the shop or garage, or a purchase. These events use a random app instance identifier; they contain no name, e-mail, account, precise location or advertising identifier (IDFA), and they are not linked to you. Ad personalization is turned off. Google processes this data on our behalf under <a href="https://firebase.google.com/support/privacy">Firebase's privacy terms</a>. You can turn this off at any time in the game under Settings › General › Share usage and crash data (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş); while it is off, nothing is sent.</p>
+<h2>Map data and credits</h2>
+<p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (Open Database License, ODbL). Building data: Overture Maps Foundation and Microsoft. Terrain height: Mapzen Terrain Tiles. Credits for 3D models and fonts are on the in-game Credits screen.</p>
+<h2>Children</h2>
+<p>Mahalle does not knowingly collect personal information from anyone, including children.</p>
+<h2>Your rights</h2>
+<p>We hold no personal data that identifies you. For any question or request under Türkiye's data protection law (KVKK) or the GDPR, write to us.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the current version will be published on this page with a new date.</p>
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="de" lang="de">
+<h1>Mahalle – Datenschutzerklärung</h1>
+<p class="muted">Zuletzt aktualisiert: 13. Oktober 2026 · PHI SOFTWARE</p>
+<p>Mahalle ist ein Fahrspiel auf den echten Straßen der Türkei. Es gibt keine Benutzerkonten, wir zeigen keine Werbung, verfolgen dich nicht über Apps und Websites hinweg und verkaufen oder teilen keine personenbezogenen Daten. Zur Verbesserung des Spiels erheben wir anonyme Absturzberichte und Nutzungsstatistiken (siehe unten).</p>
+<h2>Auf deinem Gerät gespeicherte Daten</h2>
+<p>Dein Gold, deine Fahrzeuge, Upgrades, freigeschalteten Bezirke, dein Missionsfortschritt und deine Einstellungen werden nur auf deinem Gerät gespeichert und nicht an uns gesendet. Löschst du die App, werden sie ebenfalls gelöscht. Dauerhafte Käufe kommen mit „Käufe wiederherstellen“ zurück.</p>
+<h2>Standort</h2>
+<p>Wir nutzen deinen Standort nur, wenn du „Sokağımdan başla“ („Von meiner Straße starten“) antippst und es erlaubst. Er wird einmalig auf deinem Gerät verwendet, um den Startpunkt der Fahrt zu bestimmen. Dein genauer Standort wird nicht an unsere Server gesendet, nicht gespeichert und nicht zum Tracking genutzt. Lehnst du ab, wählst du einfach einen Bezirk aus der Liste. Die Berechtigung kannst du jederzeit unter iPhone-Einstellungen › Mahalle › Ortungsdienste ändern.</p>
+<h2>Kartendaten</h2>
+<p>Kartendaten werden in Kacheln von etwa 1 km × 1 km geladen. Eine Anfrage enthält nur die Adresse der Kachel und keine Nutzerkennung; sie verrät höchstens ungefähr, in welchem Gebiet du fährst. Wie bei jeder Internetanfrage können die Hosting-Anbieter (unser Inhaltsspeicher sowie öffentliche Open-Data-Hosts für Geländehöhen) deine IP-Adresse sehen; wir verknüpfen diese Protokolle nicht mit dir.</p>
+<h2>Wenn keine fertige Karte existiert (außerhalb der Türkei)</h2>
+<p>Wo keine fertige Karte existiert (außerhalb der Türkei), fragt das Spiel die Straßendaten im Umkreis von etwa 1,2 km um den gewählten Startpunkt live bei den OpenStreetMap-Overpass-Servern an (overpass-api.de und ein Spiegelserver in der EU). Diese Anfrage enthält keine Kennung, aber der Server sieht deine IP-Adresse und das abgefragte Gebiet.</p>
+<h2>Wetter</h2>
+<p>Das Wetter im Spiel ist das reale aktuelle Wetter des Gebiets, in dem du fährst. Dafür wird die Mittelpunktkoordinate dieses Gebiets an Apples WeatherKit gesendet, das die Anfrage nach Apples eigener Datenschutzrichtlinie verarbeitet. Das ist nicht dein genauer Standort. Wetterdaten: Apple Weather.</p>
+<h2>Käufe</h2>
+<p>Käufe werden von Apple abgewickelt; deine Zahlungsdaten sehen wir nie. Sie werden auf deinem Gerät mit StoreKit geprüft, Belege werden nicht an uns gesendet. Welches Produkt gekauft wurde, wird als anonymes Nutzungsereignis erfasst (siehe unten).</p>
+<h2>Absturzberichte und Nutzungsstatistiken</h2>
+<p>Mahalle nutzt Google Firebase Crashlytics und Firebase Analytics. Stürzt das Spiel ab, wird uns ein Absturzbericht (Gerätemodell, iOS-Version, App-Version und der technische Zustand des Spiels) gesendet. Anonyme Nutzungsereignisse zeigen uns, welche Funktionen genutzt werden, etwa das Laden eines Bezirks, Start oder Ende einer Mission, eine Entdeckung, das Öffnen von Shop oder Garage oder ein Kauf. Sie verwenden eine zufällige App-Instanz-ID; sie enthalten keinen Namen, keine E-Mail, kein Konto, keinen genauen Standort und keine Werbe-ID (IDFA) und werden nicht mit dir verknüpft. Anzeigenpersonalisierung ist abgeschaltet. Google verarbeitet diese Daten in unserem Auftrag nach den <a href="https://firebase.google.com/support/privacy">Datenschutzbedingungen von Firebase</a>. Du kannst das jederzeit im Spiel unter Einstellungen › Allgemein › Nutzungs- und Absturzdaten teilen (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş) ausschalten; solange es aus ist, wird nichts gesendet.</p>
+<h2>Kartendaten und Danksagungen</h2>
+<p>Kartendaten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> (Open Database License, ODbL). Gebäudedaten: Overture Maps Foundation und Microsoft. Geländehöhen: Mapzen Terrain Tiles. Die Nachweise für 3D-Modelle und Schriften stehen im Spiel auf dem Bildschirm „Credits“.</p>
+<h2>Kinder</h2>
+<p>Mahalle erhebt wissentlich von niemandem personenbezogene Daten, auch nicht von Kindern.</p>
+<h2>Deine Rechte</h2>
+<p>Wir speichern keine personenbezogenen Daten, die dich identifizieren. Für Fragen oder Anträge nach dem türkischen Datenschutzgesetz (KVKK) oder der DSGVO schreib uns.</p>
+<h2>Änderungen</h2>
+<p>Ändert sich diese Erklärung, wird die aktuelle Fassung mit neuem Datum auf dieser Seite veröffentlicht.</p>
+<h2>Kontakt</h2>
+<p>Fragen: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="fr" lang="fr">
+<h1>Mahalle – Politique de confidentialité</h1>
+<p class="muted">Dernière mise à jour : 13 octobre 2026 · PHI SOFTWARE</p>
+<p>Mahalle est un jeu de conduite sur les vraies rues de la Turquie. Il n'y a pas de compte utilisateur, nous n'affichons aucune publicité, nous ne te suivons pas d'une app ou d'un site à l'autre et nous ne vendons ni ne partageons de données personnelles. Nous collectons des rapports de plantage et des statistiques d'usage anonymes pour améliorer le jeu (voir ci-dessous).</p>
+<h2>Données stockées sur ton appareil</h2>
+<p>Ton or, tes véhicules, améliorations, districts débloqués, ta progression et tes réglages sont stockés uniquement sur ton appareil et ne nous sont pas envoyés. Si tu supprimes l'app, ils sont supprimés aussi. Les achats permanents reviennent avec « Restaurer les achats ».</p>
+<h2>Position</h2>
+<p>Nous n'utilisons ta position que si tu touches « Sokağımdan başla » (« Partir de ma rue ») et que tu l'autorises. Elle est utilisée une seule fois, sur ton appareil, pour trouver le point de départ. Ta position précise n'est pas envoyée à nos serveurs, pas conservée et pas utilisée pour te suivre. Si tu refuses, tu choisis simplement un district dans la liste. Tu peux modifier l'autorisation à tout moment dans Réglages › Mahalle › Localisation sur l'iPhone.</p>
+<h2>Données cartographiques</h2>
+<p>Les données cartographiques sont téléchargées par dalles d'environ 1 km × 1 km. Une requête ne contient que l'adresse de la dalle, sans identifiant utilisateur ; elle indique au plus la zone approximative où tu roules. Comme pour toute requête Internet, les hébergeurs (notre stockage de contenu et des hébergeurs publics de données ouvertes pour le relief) peuvent voir ton adresse IP ; nous ne relions pas ces journaux à toi.</p>
+<h2>Si aucune carte prête n'existe (hors de Turquie)</h2>
+<p>Là où aucune carte prête n'existe (hors de Turquie), le jeu demande en direct les données de rues dans un rayon d'environ 1,2 km autour du point de départ choisi aux serveurs OpenStreetMap Overpass (overpass-api.de et un miroir dans l'UE). Cette requête ne contient aucun identifiant, mais le serveur voit ton adresse IP et la zone interrogée.</p>
+<h2>Météo</h2>
+<p>La météo du jeu est la météo réelle du moment dans la zone où tu roules. Pour cela, la coordonnée centrale de cette zone est envoyée au service WeatherKit d'Apple, qui traite la requête selon sa propre politique de confidentialité. Ce n'est pas ta position précise. Données météo : Apple Weather.</p>
+<h2>Achats</h2>
+<p>Les achats sont gérés par Apple ; nous ne voyons jamais tes informations de paiement. Ils sont vérifiés sur ton appareil avec StoreKit et les reçus ne nous sont pas envoyés. Le produit acheté est enregistré comme événement d'usage anonyme (voir ci-dessous).</p>
+<h2>Rapports de plantage et statistiques d'usage</h2>
+<p>Mahalle utilise Google Firebase Crashlytics et Firebase Analytics. Quand le jeu plante, un rapport de plantage (modèle de l'appareil, version d'iOS, version de l'app et état technique du jeu) nous est envoyé. Des événements d'usage anonymes nous indiquent quelles fonctions sont utilisées, par exemple le chargement d'un district, le début ou la fin d'une mission, une découverte, l'ouverture de la boutique ou du garage, ou un achat. Ils utilisent un identifiant d'instance d'app aléatoire ; ils ne contiennent ni nom, ni e-mail, ni compte, ni position précise, ni identifiant publicitaire (IDFA), et ne sont pas liés à toi. La personnalisation des publicités est désactivée. Google traite ces données pour notre compte selon les <a href="https://firebase.google.com/support/privacy">conditions de confidentialité de Firebase</a>. Tu peux le désactiver à tout moment dans le jeu sous Réglages › Général › Partager les données d'usage et de plantage (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş) ; tant que c'est désactivé, rien n'est envoyé.</p>
+<h2>Données cartographiques et crédits</h2>
+<p>Données cartographiques © <a href="https://www.openstreetmap.org/copyright">contributeurs OpenStreetMap</a> (Open Database License, ODbL). Bâtiments : Overture Maps Foundation et Microsoft. Relief : Mapzen Terrain Tiles. Les crédits des modèles 3D et des polices figurent dans l'écran « Crédits » du jeu.</p>
+<h2>Enfants</h2>
+<p>Mahalle ne collecte sciemment aucune information personnelle, y compris auprès des enfants.</p>
+<h2>Tes droits</h2>
+<p>Nous ne détenons aucune donnée personnelle qui t'identifie. Pour toute question ou demande au titre de la loi turque (KVKK) ou du RGPD, écris-nous.</p>
+<h2>Modifications</h2>
+<p>Si cette politique change, la version à jour sera publiée sur cette page avec une nouvelle date.</p>
+<h2>Contact</h2>
+<p>Questions : <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="nl" lang="nl">
+<h1>Mahalle – Privacybeleid</h1>
+<p class="muted">Laatst bijgewerkt: 13 oktober 2026 · PHI SOFTWARE</p>
+<p>Mahalle is een rijspel op de echte straten van Turkije. Er zijn geen gebruikersaccounts, we tonen geen advertenties, we volgen je niet over apps of websites heen en we verkopen of delen geen persoonsgegevens. Om het spel te verbeteren verzamelen we anonieme crashrapporten en gebruiksstatistieken (zie hieronder).</p>
+<h2>Op je toestel opgeslagen gegevens</h2>
+<p>Je goud, voertuigen, upgrades, ontgrendelde districten, missievoortgang en instellingen worden alleen op je toestel opgeslagen en niet naar ons gestuurd. Verwijder je de app, dan verdwijnen ze ook. Blijvende aankopen komen terug met “Aankopen herstellen”.</p>
+<h2>Locatie</h2>
+<p>We gebruiken je locatie alleen als je op “Sokağımdan başla” (“Vanaf mijn straat beginnen”) tikt en toestemming geeft. De locatie wordt eenmalig op je toestel gebruikt om het startpunt te bepalen. Je exacte locatie wordt niet naar onze servers gestuurd, niet opgeslagen en niet gebruikt om je te volgen. Weiger je, dan kies je gewoon een district uit de lijst. Je kunt de toestemming altijd wijzigen via Instellingen › Mahalle › Locatie op je iPhone.</p>
+<h2>Kaartgegevens</h2>
+<p>Kaartgegevens worden gedownload in tegels van ongeveer 1 km × 1 km. Een verzoek bevat alleen het adres van de tegel en geen gebruikers-ID, dus het toont hooguit het gebied waarin je rijdt. Zoals bij elk internetverzoek kunnen de hostingpartijen (onze contentopslag en openbare open-datahosts voor terreinhoogte) je IP-adres zien; we koppelen die logs niet aan jou.</p>
+<h2>Als er geen kant-en-klare kaart is (buiten Turkije)</h2>
+<p>Waar geen kant-en-klare kaart bestaat (buiten Turkije), vraagt het spel straatgegevens binnen ongeveer 1,2 km van het gekozen startpunt live op bij de OpenStreetMap Overpass-servers (overpass-api.de en een mirror in de EU). Dit verzoek bevat geen identificatie, maar de server ziet je IP-adres en het opgevraagde gebied.</p>
+<h2>Weer</h2>
+<p>Het weer in het spel is het echte actuele weer van het gebied waarin je rijdt. Hiervoor wordt de middencoördinaat van dat gebied naar Apples WeatherKit gestuurd, dat het verzoek volgens Apples eigen privacybeleid verwerkt. Dit is niet je exacte locatie. Weergegevens: Apple Weather.</p>
+<h2>Aankopen</h2>
+<p>Aankopen worden door Apple afgehandeld; je betaalgegevens zien we nooit. Ze worden op je toestel met StoreKit gecontroleerd en bonnen worden niet naar ons gestuurd. Welk product is gekocht, wordt vastgelegd als anonieme gebruiksgebeurtenis (zie hieronder).</p>
+<h2>Crashrapporten en gebruiksstatistieken</h2>
+<p>Mahalle gebruikt Google Firebase Crashlytics en Firebase Analytics. Als het spel crasht, wordt een crashrapport (toestelmodel, iOS-versie, app-versie en de technische staat van het spel) naar ons gestuurd. Anonieme gebruiksgebeurtenissen laten zien welke functies worden gebruikt, bijvoorbeeld het laden van een district, het starten of afronden van een missie, een ontdekking, het openen van winkel of garage, of een aankoop. Ze gebruiken een willekeurige app-instantie-ID; ze bevatten geen naam, e-mail, account, exacte locatie of advertentie-ID (IDFA) en zijn niet aan jou gekoppeld. Advertentiepersonalisatie staat uit. Google verwerkt deze gegevens namens ons volgens de <a href="https://firebase.google.com/support/privacy">privacyvoorwaarden van Firebase</a>. Je kunt dit altijd uitzetten in het spel onder Instellingen › Algemeen › Gebruiks- en crashgegevens delen (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş); zolang het uit staat, wordt niets verzonden.</p>
+<h2>Kaartgegevens en credits</h2>
+<p>Kaartgegevens © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-bijdragers</a> (Open Database License, ODbL). Gebouwgegevens: Overture Maps Foundation en Microsoft. Terreinhoogte: Mapzen Terrain Tiles. De credits voor 3D-modellen en lettertypen staan op het scherm “Credits” in het spel.</p>
+<h2>Kinderen</h2>
+<p>Mahalle verzamelt niet bewust persoonsgegevens van wie dan ook, kinderen inbegrepen.</p>
+<h2>Je rechten</h2>
+<p>We bewaren geen persoonsgegevens die jou identificeren. Voor vragen of verzoeken op grond van de Turkse privacywet (KVKK) of de AVG kun je ons mailen.</p>
+<h2>Wijzigingen</h2>
+<p>Als dit beleid verandert, wordt de actuele versie met een nieuwe datum op deze pagina gepubliceerd.</p>
+<h2>Contact</h2>
+<p>Vragen: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="es" lang="es">
+<h1>Mahalle – Política de privacidad</h1>
+<p class="muted">Última actualización: 13 de octubre de 2026 · PHI SOFTWARE</p>
+<p>Mahalle es un juego de conducción en las calles reales de Turquía. No hay cuentas de usuario, no mostramos anuncios, no te rastreamos entre apps ni sitios web y no vendemos ni compartimos datos personales. Recogemos informes de fallos y estadísticas de uso anónimos para mejorar el juego (ver abajo).</p>
+<h2>Datos guardados en tu dispositivo</h2>
+<p>Tu oro, vehículos, mejoras, distritos desbloqueados, progreso de misiones y ajustes se guardan solo en tu dispositivo y no se nos envían. Si borras la app, también se borran. Las compras permanentes vuelven con «Restaurar compras».</p>
+<h2>Ubicación</h2>
+<p>Solo usamos tu ubicación si tocas «Sokağımdan başla» («Empezar desde mi calle») y lo permites. Se usa una vez, en tu dispositivo, para saber dónde empezar a conducir. Tu ubicación precisa no se envía a nuestros servidores, no se guarda y no se usa para rastrearte. Si no lo permites, eliges un distrito de la lista. Puedes cambiar el permiso cuando quieras en Ajustes › Mahalle › Ubicación del iPhone.</p>
+<h2>Datos del mapa</h2>
+<p>Los datos del mapa se descargan en teselas de aproximadamente 1 km × 1 km. La solicitud solo contiene la dirección de la tesela, sin ningún identificador de usuario; como mucho muestra la zona aproximada por la que conduces. Como en cualquier solicitud de internet, los proveedores de alojamiento (nuestro almacenamiento de contenido y servidores públicos de datos abiertos para la altitud del terreno) pueden ver tu dirección IP; no vinculamos esos registros contigo.</p>
+<h2>Si no hay un mapa preparado (fuera de Turquía)</h2>
+<p>Donde no existe un mapa preparado (fuera de Turquía), el juego solicita en directo los datos de calles en unos 1,2 km alrededor del punto de inicio elegido a los servidores Overpass de OpenStreetMap (overpass-api.de y un espejo en la UE). Esta solicitud no lleva ningún identificador, pero el servidor ve tu dirección IP y la zona consultada.</p>
+<h2>Clima</h2>
+<p>El clima del juego es el clima real actual de la zona por la que conduces. Para obtenerlo, la coordenada central de esa zona se envía al servicio WeatherKit de Apple, que trata la solicitud según su propia política de privacidad. No es tu ubicación precisa. Datos meteorológicos: Apple Weather.</p>
+<h2>Compras</h2>
+<p>Las compras las gestiona Apple; nunca vemos tus datos de pago. Se verifican en tu dispositivo con StoreKit y los recibos no se nos envían. Qué producto se compró se registra como evento de uso anónimo (ver abajo).</p>
+<h2>Informes de fallos y estadísticas de uso</h2>
+<p>Mahalle usa Google Firebase Crashlytics y Firebase Analytics. Cuando el juego falla, se nos envía un informe de fallo (modelo del dispositivo, versión de iOS, versión de la app y estado técnico del juego). Los eventos de uso anónimos nos dicen qué funciones se usan, por ejemplo cargar un distrito, iniciar o terminar una misión, un descubrimiento, abrir la tienda o el garaje, o una compra. Usan un identificador aleatorio de instancia de la app; no contienen nombre, correo, cuenta, ubicación precisa ni identificador publicitario (IDFA) y no se vinculan contigo. La personalización de anuncios está desactivada. Google procesa estos datos en nuestro nombre según las <a href="https://firebase.google.com/support/privacy">condiciones de privacidad de Firebase</a>. Puedes desactivarlo cuando quieras en el juego, en Ajustes › General › Compartir datos de uso y fallos (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş); mientras esté desactivado, no se envía nada.</p>
+<h2>Datos del mapa y créditos</h2>
+<p>Datos del mapa © <a href="https://www.openstreetmap.org/copyright">colaboradores de OpenStreetMap</a> (Open Database License, ODbL). Edificios: Overture Maps Foundation y Microsoft. Altitud del terreno: Mapzen Terrain Tiles. Los créditos de los modelos 3D y las fuentes están en la pantalla «Créditos» del juego.</p>
+<h2>Niños</h2>
+<p>Mahalle no recoge a sabiendas información personal de nadie, incluidos los niños.</p>
+<h2>Tus derechos</h2>
+<p>No conservamos datos personales que te identifiquen. Para cualquier consulta o solicitud bajo la ley turca de protección de datos (KVKK) o el RGPD, escríbenos.</p>
+<h2>Cambios</h2>
+<p>Si esta política cambia, la versión vigente se publicará en esta página con una nueva fecha.</p>
+<h2>Contacto</h2>
+<p>Preguntas: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="it" lang="it">
+<h1>Mahalle – Informativa sulla privacy</h1>
+<p class="muted">Ultimo aggiornamento: 13 ottobre 2026 · PHI SOFTWARE</p>
+<p>Mahalle è un gioco di guida sulle strade vere della Turchia. Non ci sono account utente, non mostriamo pubblicità, non ti tracciamo tra app e siti web e non vendiamo né condividiamo dati personali. Per migliorare il gioco raccogliamo rapporti di arresto anomalo e statistiche d'uso anonimi (vedi sotto).</p>
+<h2>Dati salvati sul tuo dispositivo</h2>
+<p>Oro, veicoli, potenziamenti, distretti sbloccati, progressi nelle missioni e impostazioni sono salvati solo sul tuo dispositivo e non vengono inviati a noi. Se elimini l'app vengono eliminati anche loro. Gli acquisti permanenti tornano con «Ripristina acquisti».</p>
+<h2>Posizione</h2>
+<p>Usiamo la tua posizione solo se tocchi «Sokağımdan başla» («Parti dalla mia strada») e lo consenti. Viene usata una volta, sul dispositivo, per capire da dove iniziare a guidare. La tua posizione precisa non viene inviata ai nostri server, non viene salvata e non serve a tracciarti. Se rifiuti, scegli semplicemente un distretto dall'elenco. Puoi cambiare il permesso in qualsiasi momento in Impostazioni › Mahalle › Posizione su iPhone.</p>
+<h2>Dati cartografici</h2>
+<p>I dati cartografici vengono scaricati in riquadri di circa 1 km × 1 km. La richiesta contiene solo l'indirizzo del riquadro, senza alcun identificativo dell'utente; al massimo indica la zona approssimativa in cui guidi. Come per ogni richiesta Internet, i provider di hosting (il nostro archivio di contenuti e host pubblici di dati aperti per l'altitudine del terreno) possono vedere il tuo indirizzo IP; non colleghiamo questi log a te.</p>
+<h2>Se non esiste una mappa pronta (fuori dalla Turchia)</h2>
+<p>Dove non esiste una mappa pronta (fuori dalla Turchia), il gioco richiede in tempo reale i dati stradali entro circa 1,2 km dal punto di partenza scelto ai server Overpass di OpenStreetMap (overpass-api.de e un mirror nell'UE). Questa richiesta non contiene identificativi, ma il server vede il tuo indirizzo IP e la zona richiesta.</p>
+<h2>Meteo</h2>
+<p>Il meteo nel gioco è quello reale e attuale della zona in cui guidi. Per ottenerlo, la coordinata centrale di quella zona viene inviata al servizio WeatherKit di Apple, che tratta la richiesta secondo la propria informativa sulla privacy. Non è la tua posizione precisa. Dati meteo: Apple Weather.</p>
+<h2>Acquisti</h2>
+<p>Gli acquisti sono gestiti da Apple; non vediamo mai i tuoi dati di pagamento. Vengono verificati sul dispositivo con StoreKit e le ricevute non ci vengono inviate. Quale prodotto è stato acquistato viene registrato come evento d'uso anonimo (vedi sotto).</p>
+<h2>Rapporti di arresto anomalo e statistiche d'uso</h2>
+<p>Mahalle usa Google Firebase Crashlytics e Firebase Analytics. Quando il gioco si chiude in modo anomalo, ci viene inviato un rapporto (modello del dispositivo, versione di iOS, versione dell'app e stato tecnico del gioco). Gli eventi d'uso anonimi ci dicono quali funzioni vengono usate, ad esempio il caricamento di un distretto, l'avvio o il termine di una missione, una scoperta, l'apertura di negozio o garage, o un acquisto. Usano un identificativo casuale dell'istanza dell'app; non contengono nome, e-mail, account, posizione precisa né identificativo pubblicitario (IDFA) e non sono collegati a te. La personalizzazione degli annunci è disattivata. Google tratta questi dati per nostro conto secondo le <a href="https://firebase.google.com/support/privacy">condizioni sulla privacy di Firebase</a>. Puoi disattivarlo in qualsiasi momento nel gioco in Impostazioni › Generali › Condividi dati di utilizzo e arresti anomali (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş); finché è disattivato, non viene inviato nulla.</p>
+<h2>Dati cartografici e crediti</h2>
+<p>Dati cartografici © <a href="https://www.openstreetmap.org/copyright">collaboratori di OpenStreetMap</a> (Open Database License, ODbL). Edifici: Overture Maps Foundation e Microsoft. Altitudine del terreno: Mapzen Terrain Tiles. I crediti dei modelli 3D e dei font sono nella schermata «Crediti» del gioco.</p>
+<h2>Bambini</h2>
+<p>Mahalle non raccoglie consapevolmente informazioni personali da nessuno, bambini compresi.</p>
+<h2>I tuoi diritti</h2>
+<p>Non conserviamo dati personali che ti identifichino. Per domande o richieste ai sensi della legge turca sulla protezione dei dati (KVKK) o del GDPR, scrivici.</p>
+<h2>Modifiche</h2>
+<p>Se questa informativa cambia, la versione aggiornata sarà pubblicata in questa pagina con una nuova data.</p>
+<h2>Contatti</h2>
+<p>Domande: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="ru" lang="ru">
+<h1>Mahalle – Политика конфиденциальности</h1>
+<p class="muted">Обновлено: 13 октября 2026 г. · PHI SOFTWARE</p>
+<p>Mahalle — игра про вождение по настоящим улицам Турции. Аккаунтов нет, рекламу мы не показываем, не отслеживаем вас в других приложениях и на сайтах, не продаём и не передаём персональные данные. Для улучшения игры мы собираем анонимные отчёты о сбоях и статистику использования (см. ниже).</p>
+<h2>Данные на вашем устройстве</h2>
+<p>Ваше золото, машины, улучшения, открытые районы, прогресс заданий и настройки хранятся только на вашем устройстве и нам не отправляются. При удалении приложения они тоже удаляются. Постоянные покупки возвращаются через «Восстановить покупки».</p>
+<h2>Геопозиция</h2>
+<p>Мы используем геопозицию только если вы нажимаете «Sokağımdan başla» («Начать с моей улицы») и разрешаете доступ. Она применяется один раз, на вашем устройстве, чтобы определить место старта. Точная геопозиция не отправляется на наши серверы, не сохраняется и не используется для слежки. Если вы откажетесь, просто выберете район из списка. Разрешение можно изменить в любой момент: Настройки › Mahalle › Геопозиция на iPhone.</p>
+<h2>Данные карты</h2>
+<p>Данные карты загружаются плитками примерно 1 км × 1 км. Запрос содержит только адрес плитки и не содержит идентификатора пользователя, поэтому показывает самое большее приблизительный район поездки. Как и при любом интернет-запросе, хостинг-провайдеры (наше хранилище контента и публичные хосты открытых данных о рельефе) видят ваш IP-адрес; мы не связываем эти журналы с вами.</p>
+<h2>Если готовой карты нет (за пределами Турции)</h2>
+<p>Там, где готовой карты нет (за пределами Турции), игра запрашивает данные об улицах в радиусе около 1,2 км от выбранной точки старта в реальном времени с серверов OpenStreetMap Overpass (overpass-api.de и зеркало в ЕС). Запрос не содержит идентификатора, но сервер видит ваш IP-адрес и запрошенный район.</p>
+<h2>Погода</h2>
+<p>Погода в игре — это реальная текущая погода в районе, где вы едете. Для этого координата центра района отправляется в сервис Apple WeatherKit, который обрабатывает запрос по собственной политике конфиденциальности Apple. Это не ваша точная геопозиция. Данные о погоде: Apple Weather.</p>
+<h2>Покупки</h2>
+<p>Покупки обрабатывает Apple; платёжных данных мы не видим. Они проверяются на устройстве через StoreKit, чеки нам не отправляются. Информация о том, какой товар куплен, записывается как анонимное событие использования (см. ниже).</p>
+<h2>Отчёты о сбоях и статистика использования</h2>
+<p>Mahalle использует Google Firebase Crashlytics и Firebase Analytics. Если игра вылетает, нам отправляется отчёт о сбое (модель устройства, версия iOS, версия приложения и техническое состояние игры). Анонимные события использования показывают, какие функции используются, например загрузка района, начало или завершение задания, открытие, посещение магазина или гаража, покупка. Они используют случайный идентификатор экземпляра приложения; в них нет имени, e-mail, аккаунта, точной геопозиции и рекламного идентификатора (IDFA), и они не связаны с вами. Персонализация рекламы отключена. Google обрабатывает эти данные от нашего имени по <a href="https://firebase.google.com/support/privacy">условиям конфиденциальности Firebase</a>. Это можно отключить в любой момент в игре: Настройки › Общие › Делиться данными об использовании и сбоях (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş); пока опция выключена, ничего не отправляется.</p>
+<h2>Данные карты и благодарности</h2>
+<p>Данные карты © <a href="https://www.openstreetmap.org/copyright">участники OpenStreetMap</a> (Open Database License, ODbL). Здания: Overture Maps Foundation и Microsoft. Рельеф: Mapzen Terrain Tiles. Авторство 3D-моделей и шрифтов указано на экране «Авторы» в игре.</p>
+<h2>Дети</h2>
+<p>Mahalle сознательно не собирает персональные данные ни у кого, включая детей.</p>
+<h2>Ваши права</h2>
+<p>Мы не храним персональных данных, позволяющих вас идентифицировать. По вопросам и запросам в рамках закона Турции о защите данных (KVKK) или GDPR напишите нам.</p>
+<h2>Изменения</h2>
+<p>Если эта политика изменится, актуальная версия будет опубликована на этой странице с новой датой.</p>
+<h2>Контакты</h2>
+<p>Вопросы: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="ar" lang="ar" dir="rtl">
+<h1>Mahalle – سياسة الخصوصية</h1>
+<p class="muted">آخر تحديث: 13 أكتوبر 2026 · PHI SOFTWARE</p>
+<p>Mahalle لعبة قيادة في شوارع تركيا الحقيقية. لا توجد حسابات مستخدمين، ولا نعرض إعلانات، ولا نتتبعك عبر التطبيقات أو المواقع، ولا نبيع بياناتك الشخصية ولا نشاركها. نجمع تقارير أعطال وإحصاءات استخدام مجهولة لتحسين اللعبة (انظر أدناه).</p>
+<h2>البيانات المخزّنة على جهازك</h2>
+<p>يُخزَّن ذهبك ومركباتك وتطويراتك والمناطق التي فتحتها وتقدمك في المهام وإعداداتك على جهازك فقط ولا تُرسل إلينا. إذا حذفت التطبيق حُذفت معه. تعود المشتريات الدائمة عبر «استعادة المشتريات».</p>
+<h2>الموقع</h2>
+<p>لا نستخدم موقعك إلا إذا ضغطت «Sokağımdan başla» («ابدأ من شارعي») وسمحت بذلك. يُستخدم مرة واحدة على جهازك لتحديد مكان بدء القيادة. لا يُرسل موقعك الدقيق إلى خوادمنا ولا يُخزَّن ولا يُستخدم لتتبعك. إذا رفضت فاختر منطقة من القائمة. يمكنك تغيير الإذن في أي وقت من الإعدادات › Mahalle › الموقع على iPhone.</p>
+<h2>بيانات الخريطة</h2>
+<p>تُنزَّل بيانات الخريطة في مربعات مساحتها نحو 1 كم × 1 كم. يتضمن الطلب عنوان المربع فقط دون أي معرّف للمستخدم، فهو يكشف على الأكثر المنطقة التقريبية التي تقود فيها. وكما في أي طلب إنترنت، يستطيع مزوّدو الاستضافة (مخزن المحتوى لدينا ومضيفو البيانات المفتوحة العامة لارتفاع التضاريس) رؤية عنوان IP الخاص بك؛ ولا نربط هذه السجلات بك.</p>
+<h2>عند عدم توفر خريطة جاهزة (خارج تركيا)</h2>
+<p>في الأماكن التي لا تتوفر فيها خريطة جاهزة (خارج تركيا) تطلب اللعبة فورًا بيانات الشوارع ضمن نحو 1.2 كم حول نقطة البداية المختارة من خوادم OpenStreetMap Overpass (overpass-api.de ونسخة مرآة في الاتحاد الأوروبي). لا يحمل هذا الطلب أي معرّف، لكن الخادم يرى عنوان IP الخاص بك والمنطقة المطلوبة.</p>
+<h2>الطقس</h2>
+<p>الطقس في اللعبة هو الطقس الحقيقي الحالي للمنطقة التي تقود فيها. ولهذا تُرسل إحداثيات مركز تلك المنطقة إلى خدمة WeatherKit من Apple التي تعالج الطلب وفق سياسة الخصوصية الخاصة بها. وهذا ليس موقعك الدقيق. بيانات الطقس: Apple Weather.</p>
+<h2>المشتريات</h2>
+<p>تتولى Apple معالجة المشتريات ولا نرى بيانات الدفع الخاصة بك. يجري التحقق منها على جهازك عبر StoreKit ولا تُرسل الإيصالات إلينا. يُسجَّل المنتج المشترى كحدث استخدام مجهول (انظر أدناه).</p>
+<h2>تقارير الأعطال وإحصاءات الاستخدام</h2>
+<p>تستخدم Mahalle خدمتي Google Firebase Crashlytics وFirebase Analytics. عند تعطل اللعبة يُرسل إلينا تقرير عطل (طراز الجهاز وإصدار iOS وإصدار التطبيق والحالة التقنية للّعبة). وتخبرنا أحداث الاستخدام المجهولة بالميزات المستخدمة، مثل تحميل منطقة أو بدء مهمة أو إنهائها أو اكتشاف أو فتح المتجر أو المرآب أو عملية شراء. تستخدم هذه الأحداث معرّفًا عشوائيًا لنسخة التطبيق، ولا تتضمن اسمًا ولا بريدًا إلكترونيًا ولا حسابًا ولا موقعًا دقيقًا ولا معرّف إعلانات (IDFA)، ولا ترتبط بك. تخصيص الإعلانات متوقف. تعالج Google هذه البيانات نيابةً عنا وفق <a href="https://firebase.google.com/support/privacy">شروط خصوصية Firebase</a>. يمكنك إيقاف ذلك في أي وقت داخل اللعبة من الإعدادات › عام › مشاركة بيانات الاستخدام والأعطال (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş)؛ وعند إيقافه لا يُرسل شيء.</p>
+<h2>بيانات الخريطة والشكر</h2>
+<p>بيانات الخريطة © <a href="https://www.openstreetmap.org/copyright">مساهمو OpenStreetMap</a> (رخصة قاعدة البيانات المفتوحة ODbL). بيانات المباني: Overture Maps Foundation وMicrosoft. ارتفاع التضاريس: Mapzen Terrain Tiles. تجد نسب أعمال النماذج ثلاثية الأبعاد والخطوط في شاشة «شكر وتقدير» داخل اللعبة.</p>
+<h2>الأطفال</h2>
+<p>لا تجمع Mahalle عن قصد معلومات شخصية من أي شخص، بمن فيهم الأطفال.</p>
+<h2>حقوقك</h2>
+<p>لا نحتفظ ببيانات شخصية تحدد هويتك. لأي سؤال أو طلب بموجب قانون حماية البيانات التركي (KVKK) أو اللائحة الأوروبية GDPR راسلنا.</p>
+<h2>التغييرات</h2>
+<p>إذا تغيّرت هذه السياسة فستُنشر النسخة الحالية في هذه الصفحة بتاريخ جديد.</p>
+<h2>التواصل</h2>
+<p>للاستفسار: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+<article data-l="az" lang="az">
+<h1>Mahalle – Məxfilik Siyasəti</h1>
+<p class="muted">Son yenilənmə: 13 oktyabr 2026 · PHI SOFTWARE</p>
+<p>Mahalle Türkiyənin real küçələrində sürüş oyunudur. İstifadəçi hesabı yoxdur; reklam göstərmirik, səni başqa tətbiq və saytlarda izləmirik, şəxsi məlumatı satmırıq və paylaşmırıq. Oyunu yaxşılaşdırmaq üçün anonim çökmə hesabatları və istifadə statistikası toplayırıq (aşağıda).</p>
+<h2>Cihazında saxlanan məlumatlar</h2>
+<p>Qızılın, avtomobillərin, təkmilləşdirmələrin, açdığın rayonlar, tapşırıq irəliləyişin və ayarların yalnız cihazında saxlanır, bizə göndərilmir. Tətbiqi silsən, onlar da silinir. Daimi alışlar “Alışları bərpa et” ilə geri qayıdır.</p>
+<h2>Məkan</h2>
+<p>Məkanını yalnız “Sokağımdan başla” (“Küçəmdən başla”) düyməsinə toxunub icazə verdikdə istifadə edirik. O, bir dəfə, cihazında sürüşə haradan başlanacağını tapmaq üçün istifadə olunur. Dəqiq məkanın serverlərimizə göndərilmir, saxlanmır və səni izləmək üçün istifadə edilmir. İcazə verməsən, siyahıdan rayon seçirsən. İcazəni istənilən vaxt iPhone-da Ayarlar › Mahalle › Məkan bölməsindən dəyişə bilərsən.</p>
+<h2>Xəritə məlumatı</h2>
+<p>Xəritə məlumatı təxminən 1 km × 1 km-lik sahələr şəklində yüklənir. Sorğu yalnız sahənin ünvanını ehtiva edir, istifadəçini tanıdan identifikator yoxdur; ən çoxu sürdüyün ərazinin təxmini yerini göstərir. Hər internet sorğusunda olduğu kimi, hostinq provayderləri (məzmun anbarımız və relyef hündürlüyü üçün açıq məlumat hostları) IP ünvanını görə bilər; bu qeydləri səninlə əlaqələndirmirik.</p>
+<h2>Hazır xəritə olmadıqda (Türkiyədən kənarda)</h2>
+<p>Hazır xəritənin olmadığı yerdə (Türkiyədən kənarda) oyun seçilən başlanğıc nöqtəsinin təxminən 1,2 km ətrafındakı küçə məlumatını anlıq olaraq OpenStreetMap Overpass serverlərindən (overpass-api.de və Aİ-dəki güzgü) istəyir. Bu sorğu identifikator daşımır, lakin server IP ünvanını və sorğulanan əraziyə baxa bilir.</p>
+<h2>Hava</h2>
+<p>Oyundakı hava sürdüyün ərazinin həmin andakı real havasıdır. Bunun üçün ərazinin mərkəz koordinatı Apple-ın WeatherKit xidmətinə göndərilir; Apple bu sorğunu öz məxfilik siyasətinə görə emal edir. Bu sənin dəqiq məkanın deyil. Hava məlumatı: Apple Weather.</p>
+<h2>Alışlar</h2>
+<p>Alışları Apple həyata keçirir; ödəniş məlumatlarını biz görmürük. Alış cihazında StoreKit ilə yoxlanılır, qəbzlər bizə göndərilmir. Hansı məhsulun alındığı anonim istifadə hadisəsi kimi qeyd olunur (aşağıya bax).</p>
+<h2>Çökmə hesabatları və istifadə statistikası</h2>
+<p>Mahalle Google Firebase Crashlytics və Firebase Analytics-dən istifadə edir. Oyun çökdükdə bizə çökmə hesabatı (cihaz modeli, iOS versiyası, tətbiq versiyası və oyunun texniki vəziyyəti) göndərilir. Anonim istifadə hadisələri hansı funksiyaların istifadə olunduğunu göstərir; məsələn, rayonun yüklənməsi, tapşırığın başlaması və ya bitməsi, kəşf, mağaza və ya qarajın açılması, alış. Bu hadisələr təsadüfi tətbiq identifikatorundan istifadə edir; ad, e-poçt, hesab, dəqiq məkan və reklam identifikatoru (IDFA) daxil deyil və səninlə əlaqələndirilmir. Reklam fərdiləşdirməsi söndürülüb. Google bu məlumatı bizim adımıza <a href="https://firebase.google.com/support/privacy">Firebase məxfilik şərtlərinə</a> görə emal edir. Bunu istənilən vaxt oyunda Ayarlar › Ümumi › İstifadə və çökmə məlumatlarını paylaş (Ayarlar › Genel › Kullanım ve çökme verilerini paylaş) bölməsindən söndürə bilərsən; söndürülmüşkən heç nə göndərilmir.</p>
+<h2>Xəritə məlumatı və təşəkkürlər</h2>
+<p>Xəritə məlumatı © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap töhfəçiləri</a> (Open Database License, ODbL). Bina məlumatı: Overture Maps Foundation və Microsoft. Relyef hündürlüyü: Mapzen Terrain Tiles. 3D modellərin və şriftlərin müəllifləri oyundakı “Təşəkkürlər” ekranındadır.</p>
+<h2>Uşaqlar</h2>
+<p>Mahalle uşaqlar daxil heç kimdən bilərəkdən şəxsi məlumat toplamır.</p>
+<h2>Hüquqların</h2>
+<p>Səni tanıdan şəxsi məlumat saxlamırıq. Türkiyənin məlumatların qorunması qanunu (KVKK) və ya GDPR çərçivəsində hər hansı sual və ya tələb üçün bizə yaz.</p>
+<h2>Dəyişikliklər</h2>
+<p>Bu siyasət dəyişərsə, güncel variant bu səhifədə yeni tarixlə dərc olunacaq.</p>
+<h2>Əlaqə</h2>
+<p>Suallar üçün: <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 PHI Software · <a href="https://www.phisoftware.com.tr/">phisoftware.com.tr</a></span>
+    <span><a href="privacy.html"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span><span data-l="de">Datenschutzerklärung</span><span data-l="fr">Politique de confidentialité</span><span data-l="nl">Privacybeleid</span><span data-l="es">Política de privacidad</span><span data-l="it">Informativa sulla privacy</span><span data-l="ru">Политика конфиденциальности</span><span data-l="ar">سياسة الخصوصية</span><span data-l="az">Məxfilik Siyasəti</span></a> · <a href="terms.html"><span data-l="tr">Kullanım Koşulları</span><span data-l="en">Terms of Use</span><span data-l="de">Nutzungsbedingungen</span><span data-l="fr">Conditions d'utilisation</span><span data-l="nl">Gebruiksvoorwaarden</span><span data-l="es">Condiciones de uso</span><span data-l="it">Condizioni d'uso</span><span data-l="ru">Условия использования</span><span data-l="ar">شروط الاستخدام</span><span data-l="az">İstifadə Şərtləri</span></a> · <a href="support.html"><span data-l="tr">Destek</span><span data-l="en">Support</span><span data-l="de">Support</span><span data-l="fr">Assistance</span><span data-l="nl">Support</span><span data-l="es">Ayuda</span><span data-l="it">Assistenza</span><span data-l="ru">Поддержка</span><span data-l="ar">الدعم</span><span data-l="az">Dəstək</span></a> · <a href="mailto:info@phisoftware.com.tr">info@phisoftware.com.tr</a></span>
+    <span class="attr"><span data-l="tr">Harita verisi © OpenStreetMap katkıcıları (ODbL). Bina verisi: Overture Maps Foundation ve Microsoft. Hava: Apple Weather.</span><span data-l="en">Map data © OpenStreetMap contributors (ODbL). Building data: Overture Maps Foundation and Microsoft. Weather: Apple Weather.</span><span data-l="de">Kartendaten © OpenStreetMap-Mitwirkende (ODbL). Gebäudedaten: Overture Maps Foundation und Microsoft. Wetter: Apple Weather.</span><span data-l="fr">Données cartographiques © contributeurs OpenStreetMap (ODbL). Bâtiments : Overture Maps Foundation et Microsoft. Météo : Apple Weather.</span><span data-l="nl">Kaartgegevens © OpenStreetMap-bijdragers (ODbL). Gebouwgegevens: Overture Maps Foundation en Microsoft. Weer: Apple Weather.</span><span data-l="es">Datos del mapa © colaboradores de OpenStreetMap (ODbL). Edificios: Overture Maps Foundation y Microsoft. Clima: Apple Weather.</span><span data-l="it">Dati cartografici © collaboratori di OpenStreetMap (ODbL). Edifici: Overture Maps Foundation e Microsoft. Meteo: Apple Weather.</span><span data-l="ru">Данные карты © участники OpenStreetMap (ODbL). Здания: Overture Maps Foundation и Microsoft. Погода: Apple Weather.</span><span data-l="ar">بيانات الخريطة © مساهمو OpenStreetMap (ODbL). بيانات المباني: Overture Maps Foundation وMicrosoft. الطقس: Apple Weather.</span><span data-l="az">Xəritə məlumatı © OpenStreetMap töhfəçiləri (ODbL). Bina məlumatı: Overture Maps Foundation və Microsoft. Hava: Apple Weather.</span></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var LANGS = ["tr", "en", "de", "fr", "nl", "es", "it", "ru", "ar", "az"];
+  var TITLE = {"tr": "Mahalle – Gizlilik Politikası", "en": "Mahalle – Privacy Policy", "de": "Mahalle – Datenschutzerklärung", "fr": "Mahalle – Politique de confidentialité", "nl": "Mahalle – Privacybeleid", "es": "Mahalle – Política de privacidad", "it": "Mahalle – Informativa sulla privacy", "ru": "Mahalle – Политика конфиденциальности", "ar": "Mahalle – سياسة الخصوصية", "az": "Mahalle – Məxfilik Siyasəti"};
+  var DESC = {"tr": "Mahalle gizlilik politikası: konum yalnızca cihazında, hesap ve reklam yok, anonim çökme ve kullanım verisi.", "en": "Mahalle privacy policy: location stays on your device, no account, no ads, anonymous crash and usage data.", "de": "Datenschutzerklärung von Mahalle: Standort bleibt auf dem Gerät, kein Konto, keine Werbung, anonyme Absturz- und Nutzungsdaten.", "fr": "Politique de confidentialité de Mahalle : position sur l'appareil, sans compte, sans pub, données de plantage et d'usage anonymes.", "nl": "Privacybeleid van Mahalle: locatie blijft op je toestel, geen account, geen advertenties, anonieme crash- en gebruiksgegevens.", "es": "Política de privacidad de Mahalle: la ubicación se queda en tu dispositivo, sin cuenta, sin anuncios, datos de fallos y uso anónimos.", "it": "Informativa sulla privacy di Mahalle: la posizione resta sul dispositivo, niente account, niente pubblicità, dati anonimi di arresti e uso.", "ru": "Политика конфиденциальности Mahalle: геопозиция остаётся на устройстве, без аккаунта и рекламы, анонимные данные о сбоях и использовании.", "ar": "سياسة خصوصية Mahalle: الموقع يبقى على جهازك، بلا حساب وبلا إعلانات، وبيانات أعطال واستخدام مجهولة.", "az": "Mahalle məxfilik siyasəti: məkan cihazında qalır, hesab və reklam yoxdur, anonim çökmə və istifadə məlumatı."};
+  var root = document.documentElement;
+  function apply(lang) {
+    root.lang = lang; root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title = TITLE[lang];
+    var m = document.querySelector('meta[name=description]'); if (m) m.content = DESC[lang];
+    document.querySelectorAll('.langs button').forEach(function (b) { b.classList.toggle('on', b.dataset.set === lang); });
+  }
+  var saved = null; try { saved = localStorage.getItem('mahalle-lang'); } catch (e) {}
+  var guess = 'en', prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+  for (var i = 0; i < prefs.length; i++) { var p = String(prefs[i]).toLowerCase().slice(0, 2); if (LANGS.indexOf(p) >= 0) { guess = p; break; } }
+  var fromURL = /[?&]lang=([a-z]{2})/.exec(location.search);
+  if (fromURL && LANGS.indexOf(fromURL[1]) < 0) fromURL = null;
+  apply(fromURL ? fromURL[1] : (LANGS.indexOf(saved) >= 0 ? saved : guess));
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.set); try { localStorage.setItem('mahalle-lang', b.dataset.set); } catch (e) {} });
+  });
+})();
+</script>
+</body>
+</html>
