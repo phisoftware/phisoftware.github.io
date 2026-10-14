@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.phisoftware.caradio.app",
+      "sha256_cert_fingerprints": [
+        "67:E8:FD:85:B9:96:C4:2A:85:5A:F4:D1:C9:67:E7:CB:BA:50:7C:8B:2C:90:F7:4D:56:67:54:92:DE:77:88:8F",
+        "61:95:32:05:8E:34:48:E3:C2:82:86:90:63:05:F5:E5:31:60:D2:C8:1C:23:10:94:86:8A:79:4A:FF:CC:47:70"
+      ]
+    }
+  }
+]
